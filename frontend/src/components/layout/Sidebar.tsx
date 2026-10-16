@@ -11,6 +11,7 @@ import {
   FileText,
   Droplets,
   Landmark,
+  BookOpen,
   X
 } from 'lucide-react';
 import { PageId, Language } from '../../types';
@@ -43,6 +44,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'analysis', label: t.nav.analysis, icon: Sliders },
     { id: 'alerts', label: t.nav.alerts, icon: AlertTriangle },
     { id: 'reports', label: t.nav.reports, icon: FileText },
+    { id: 'methodology', label: t.nav.methodology, icon: BookOpen },
+    { id: 'about', label: t.nav.about, icon: Landmark },
   ];
 
   const handleItemClick = (pageId: PageId) => {

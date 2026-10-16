@@ -24,6 +24,8 @@ export const translations = {
       analysis: 'Drought Risk Analysis',
       alerts: 'Alerts & Advisories',
       reports: 'Reports & Sources',
+      methodology: 'Methodology & Data',
+      about: 'Project Overview & Pilot',
     },
     metrics: {
       compositeRisk: 'Composite Drought Risk',
@@ -79,6 +81,8 @@ export const translations = {
       analysis: 'दुष्काळ जोखीम विश्लेषण',
       alerts: 'सतर्कता व शिफारसी',
       reports: 'अहवाल व संदर्भ स्रोत',
+      methodology: 'कार्यपद्धती व संदर्भ माहिती',
+      about: 'प्रकल्प आढावा व पायलट प्रस्ताव',
     },
     metrics: {
       compositeRisk: 'संयुक्त दुष्काळ जोखीम निर्देशांक',

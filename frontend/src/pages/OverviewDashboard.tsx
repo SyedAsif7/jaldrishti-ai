@@ -11,7 +11,8 @@ import {
   Info,
   LineChart,
   Compass,
-  MapPin
+  MapPin,
+  Layers
 } from 'lucide-react';
 import { District, RegionalSummary, Language, PageId } from '../types';
 import { KpiCard } from '../components/common/KpiCard';
@@ -26,6 +27,7 @@ interface OverviewDashboardProps {
   language: Language;
   onSelectDistrict: (id: string) => void;
   onNavigatePage: (page: PageId) => void;
+  onOpenDemoTour?: () => void;
 }
 
 export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
@@ -34,7 +36,8 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
   selectedDistrict,
   language,
   onSelectDistrict,
-  onNavigatePage
+  onNavigatePage,
+  onOpenDemoTour
 }) => {
   const t = useTranslation(language);
 
@@ -48,49 +51,75 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
       {/* Transparency Disclaimer */}
       <DemoDisclaimer language={language} />
 
-      {/* Header Banner - Environmental Observatory Style */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-[#234F46] p-6 rounded-2xl border border-[#1E433B] text-[#FFFEFA] shadow-md">
-        <div>
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#8FA86E]" />
-            <span className="text-[11px] font-bold text-[#A3C4BC] tracking-wider uppercase font-sans">
-              Marathwada Hydrological Observatory · 8 Districts
+      {/* Professional Home Screen Introduction Banner */}
+      <div className="bg-[#234F46] p-6 sm:p-8 rounded-2xl border border-[#1E433B] text-[#FFFEFA] shadow-md relative overflow-hidden">
+        <div className="relative z-10 max-w-4xl space-y-4">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#1B3F38] text-[#8FA86E] text-[11px] font-bold border border-[#2D6459] uppercase tracking-wider">
+              {language === 'mr' ? 'सेवा फर्स्ट इनोव्हेशन चॅलेंज २०२६' : 'Seva First Innovation Challenge 2026'}
+            </span>
+            <span className="text-[11px] font-bold text-[#A3C4BC] tracking-wider uppercase">
+              · Marathwada Hydrological Observatory
             </span>
           </div>
-          <h1 className="text-2xl font-extrabold text-[#FFFEFA] tracking-tight">
-            {selectedDistrict
-              ? `${language === 'mr' ? selectedDistrict.name_mr : selectedDistrict.name} · ${t.nav.overview}`
-              : language === 'mr'
-              ? 'मराठवाडा विभाग दुष्काळ आणि जल सुरक्षा डॅशबोर्ड'
-              : 'Marathwada Regional Water & Drought Intelligence'}
-          </h1>
-          <p className="text-xs text-[#C2DDD6] mt-1 max-w-3xl leading-relaxed">
-            {language === 'mr'
-              ? 'मराठवाड्यातील ८ जिल्ह्यांमधील पर्जन्यमान तूट, भूजल पातळी घट आणि धरण साठ्याचे बहु-निकषीय संयुक्त मूल्यांकन.'
-              : 'Integrated hydrological monitoring and multi-criteria drought vulnerability analysis across rainfall, groundwater, and surface reservoirs.'}
-          </p>
-        </div>
 
-        <div className="flex items-center gap-2.5 shrink-0">
-          <button
-            onClick={() => onNavigatePage('forecast')}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#1B3F38] hover:bg-[#16332C] text-[#C2DDD6] border border-[#2D6459] font-semibold text-xs transition-colors shadow-2xs"
-          >
-            <LineChart className="w-4 h-4 text-[#8FA86E]" />
-            <span>{t.nav.forecast}</span>
-          </button>
-          <button
-            onClick={() => onNavigatePage('map')}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#267D9D] hover:bg-[#1C627C] text-[#FFFEFA] font-bold text-xs transition-colors shadow-xs"
-          >
-            <span>{t.nav.map}</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          <div>
+            <div className="flex items-baseline gap-3 flex-wrap">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-[#FFFEFA] tracking-tight">
+                JalDrishti AI
+              </h1>
+              <span className="text-base sm:text-lg font-medium text-[#C2DDD6]">
+                Drought Prediction & Water Intelligence System
+              </span>
+            </div>
+            <h2 className="text-sm sm:text-base font-semibold text-[#8FA86E] mt-1 tracking-wide">
+              Supporting Smarter Water Decisions Across Marathwada
+            </h2>
+          </div>
+
+          <p className="text-xs sm:text-sm text-[#D2E4DF] leading-relaxed max-w-3xl">
+            An integrated drought and water-intelligence platform designed to support district-level rainfall analysis, groundwater monitoring, reservoir assessment and evidence-based water planning.
+          </p>
+
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            {/* Functional Action 1: Explore Dashboard */}
+            <button
+              onClick={() => {
+                const el = document.getElementById('kpi-metrics-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFFEFA] text-[#234F46] font-bold text-xs hover:bg-[#F5F2E9] transition-colors shadow-sm cursor-pointer"
+            >
+              <Compass className="w-4 h-4 text-[#234F46]" />
+              <span>Explore Dashboard</span>
+            </button>
+
+            {/* Functional Action 2: View Drought Risk Map */}
+            <button
+              onClick={() => onNavigatePage('map')}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#267D9D] hover:bg-[#1C627C] text-[#FFFEFA] font-bold text-xs transition-colors shadow-xs cursor-pointer"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>View Drought Risk Map</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+
+            {/* Explore Demo Tour Action */}
+            {onOpenDemoTour && (
+              <button
+                onClick={onOpenDemoTour}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1B3F38] hover:bg-[#16332C] text-[#8FA86E] border border-[#2D6459] font-bold text-xs transition-colors shadow-2xs cursor-pointer"
+              >
+                <Layers className="w-4 h-4" />
+                <span>Explore Demo (8 Steps)</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Primary KPI Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div id="kpi-metrics-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <KpiCard
           title={t.metrics.compositeRisk}
           value={selectedDistrict ? selectedDistrict.risk.composite_score : summary.average_risk_score}

@@ -10,6 +10,8 @@ import { ReservoirStorage } from './pages/ReservoirStorage';
 import { DroughtRiskAnalysis } from './pages/DroughtRiskAnalysis';
 import { AlertsRecommendations } from './pages/AlertsRecommendations';
 import { ReportsDataSources } from './pages/ReportsDataSources';
+import { MethodologyView } from './pages/MethodologyView';
+import { ProjectOverviewView } from './pages/ProjectOverviewView';
 
 import { District, RegionalSummary, PageId, Language } from './types';
 import { CompetitionDemoTour } from './components/common/CompetitionDemoTour';
@@ -112,6 +114,7 @@ export const App: React.FC = () => {
               language={language}
               onSelectDistrict={setSelectedDistrictId}
               onNavigatePage={setCurrentPage}
+              onOpenDemoTour={() => setIsDemoTourOpen(true)}
             />
           )}
 
@@ -186,6 +189,17 @@ export const App: React.FC = () => {
               summary={summary}
               selectedDistrict={selectedDistrict}
               language={language}
+            />
+          )}
+
+          {currentPage === 'methodology' && (
+            <MethodologyView language={language} />
+          )}
+
+          {currentPage === 'about' && (
+            <ProjectOverviewView
+              language={language}
+              onNavigatePage={setCurrentPage}
             />
           )}
 

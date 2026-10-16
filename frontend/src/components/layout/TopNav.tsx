@@ -100,14 +100,14 @@ export const TopNav: React.FC<TopNavProps> = ({
         {onOpenDemoTour && (
           <button
             onClick={onOpenDemoTour}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#234F46] hover:bg-[#1E433B] text-[#FFFEFA] font-semibold text-xs shadow-xs transition-colors"
-            title="Launch Guided Evaluation Tour (Parbhani Case Study)"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#234F46] hover:bg-[#1E433B] text-[#FFFEFA] font-semibold text-xs shadow-xs transition-colors cursor-pointer"
+            title="Launch 8-Step Guided Tour (Parbhani Case Study)"
           >
             <Layers className="w-3.5 h-3.5 text-[#8FA86E]" />
             <span className="hidden sm:inline">
-              {language === 'mr' ? 'मार्गदर्शित प्रात्यक्षिक (परभणी)' : 'Guided Walkthrough (Parbhani)'}
+              {language === 'mr' ? 'डेमो एक्सप्लोर करा (८ टप्पे)' : 'Explore Demo (8 Steps)'}
             </span>
-            <span className="sm:hidden">Tour</span>
+            <span className="sm:hidden">Demo</span>
           </button>
         )}
       </div>

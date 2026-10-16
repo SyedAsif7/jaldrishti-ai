@@ -131,7 +131,9 @@ export type PageId =
   | 'reservoirs'
   | 'analysis'
   | 'alerts'
-  | 'reports';
+  | 'reports'
+  | 'methodology'
+  | 'about';
 
 export type Language = 'en' | 'mr';
 
