@@ -1,0 +1,31 @@
+services:
+  # FastAPI Backend API Service
+  - type: web
+    name: jaldrishti-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      - key: IS_DEMO_DATA
+        value: "true"
+
+  # React Frontend Static Site
+  - type: static
+    name: jaldrishti-frontend
+    region: oregon
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://jaldrishti-backend.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

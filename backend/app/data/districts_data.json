@@ -1,0 +1,676 @@
+{
+  "system_metadata": {
+    "system_name": "JalDrishti AI",
+    "sub_title": "Drought Prediction & Water Intelligence System for Marathwada",
+    "division": "Marathwada (Chhatrapati Sambhajinagar Division), Maharashtra",
+    "version": "1.0.0-prototype",
+    "context": "Seva First Innovation Challenge 2026",
+    "is_demo_data": true,
+    "disclaimer": "DEMONSTRATION DATA ONLY. Values are synthetically generated for prototype simulation and technical validation. Not an official Government of Maharashtra disaster bulletin.",
+    "formula_spec": {
+      "name": "Multi-Criteria Composite Drought Risk Index (CRI)",
+      "weights": {
+        "rainfall_deficit": 0.45,
+        "groundwater_stress": 0.35,
+        "reservoir_scarcity": 0.20
+      },
+      "formula": "CRI = 0.45 * min(100, 1.5 * Deficit%) + 0.35 * GW_Stress + 0.20 * (100 - Live_Storage%)",
+      "thresholds": {
+        "low": [0, 29],
+        "moderate": [30, 54],
+        "high": [55, 74],
+        "severe": [75, 100]
+      }
+    }
+  },
+  "regional_summary": {
+    "total_districts": 8,
+    "total_area_sq_km": 64813,
+    "total_population": 18731872,
+    "overall_risk_level": "High",
+    "average_risk_score": 62.4,
+    "average_rainfall_deficit_pct": 35.1,
+    "average_groundwater_stress": 72.8,
+    "average_reservoir_storage_pct": 36.8,
+    "districts_in_severe_risk": 2,
+    "districts_in_high_risk": 4,
+    "districts_in_moderate_risk": 2,
+    "districts_in_low_risk": 0,
+    "active_tanker_demand_talukas": 28,
+    "total_talukas": 76
+  },
+  "districts": [
+    {
+      "id": "chhatrapati-sambhajinagar",
+      "name": "Chhatrapati Sambhajinagar",
+      "name_mr": "छत्रपती संभाजीनगर",
+      "talukas_count": 9,
+      "talukas": ["Aurangabad", "Paithan", "Gangapur", "Vaijapur", "Kannad", "Khuldabad", "Sillod", "Soygaon", "Phulambri"],
+      "area_sq_km": 10107,
+      "population": 3701282,
+      "coordinates": {"lat": 19.8762, "lng": 75.3433},
+      "rainfall": {
+        "annual_normal_mm": 734.0,
+        "monsoon_normal_mm": 612.0,
+        "monsoon_actual_mm": 440.6,
+        "deficit_percentage": 28.0,
+        "spi_3month_estimate": -1.18,
+        "dry_spell_days_max": 24,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 7.8, "actual_mm": 2.1, "deficit_pct": 73.1},
+          {"month": "Feb", "normal_mm": 8.6, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 13.9, "actual_mm": 18.2, "deficit_pct": -30.9},
+          {"month": "Apr", "normal_mm": 31.8, "actual_mm": 14.5, "deficit_pct": 54.4},
+          {"month": "May", "normal_mm": 60.1, "actual_mm": 45.0, "deficit_pct": 25.1},
+          {"month": "Jun", "normal_mm": 130.4, "actual_mm": 95.2, "deficit_pct": 27.0},
+          {"month": "Jul", "normal_mm": 220.1, "actual_mm": 158.5, "deficit_pct": 28.0},
+          {"month": "Aug", "normal_mm": 204.8, "actual_mm": 147.5, "deficit_pct": 28.0},
+          {"month": "Sep", "normal_mm": 159.6, "actual_mm": 114.9, "deficit_pct": 28.0},
+          {"month": "Oct", "normal_mm": 65.2, "actual_mm": 48.0, "deficit_pct": 26.4},
+          {"month": "Nov", "normal_mm": 14.8, "actual_mm": 6.2, "deficit_pct": 58.1},
+          {"month": "Dec", "normal_mm": 6.9, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 12.8,
+        "avg_depth_post_monsoon_m": 8.4,
+        "water_table_fall_m": 1.9,
+        "depleted_wells_pct": 61.5,
+        "stress_index": 67.0,
+        "stage_of_extraction_pct": 78.4,
+        "critical_talukas_count": 3,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 8.4},
+          {"month": "Nov", "depth_m": 9.1},
+          {"month": "Dec", "depth_m": 9.8},
+          {"month": "Jan", "depth_m": 10.6},
+          {"month": "Feb", "depth_m": 11.2},
+          {"month": "Mar", "depth_m": 11.9},
+          {"month": "Apr", "depth_m": 12.4},
+          {"month": "May", "depth_m": 12.8},
+          {"month": "Jun", "depth_m": 12.5},
+          {"month": "Jul", "depth_m": 11.0},
+          {"month": "Aug", "depth_m": 9.5},
+          {"month": "Sep", "depth_m": 8.7}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 44.0,
+        "drinking_water_security_days": 165,
+        "dams": [
+          {"name": "Jayakwadi Major Dam (Paithan)", "river": "Godavari", "capacity_mcft": 102700, "live_storage_pct": 42.8, "dead_storage_alert": false, "status": "Moderate"},
+          {"name": "Galgala Medium Project", "river": "Shivna", "capacity_mcft": 1840, "live_storage_pct": 39.5, "dead_storage_alert": false, "status": "Low"},
+          {"name": "Dheku Project", "river": "Dheku", "capacity_mcft": 1480, "live_storage_pct": 49.0, "dead_storage_alert": false, "status": "Moderate"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 42.0,
+        "groundwater_component": 67.0,
+        "reservoir_component": 56.0,
+        "composite_score": 53.6,
+        "risk_level": "Moderate"
+      },
+      "advisories": [
+        {"domain": "Agriculture", "severity": "Medium", "text": "Promote micro-irrigation (drip/sprinkler) for Rabi sorghum and gram; reduce flood irrigation."},
+        {"domain": "Drinking Water", "severity": "Medium", "text": "Reserve 40% of Jayakwadi reservoir quota strictly for municipal drinking supply till July 2027."},
+        {"domain": "Groundwater", "severity": "High", "text": "Regulate new commercial tube-well drilling in Gangapur and Vaijapur critical blocks."}
+      ]
+    },
+    {
+      "id": "jalna",
+      "name": "Jalna",
+      "name_mr": "जालना",
+      "talukas_count": 8,
+      "talukas": ["Jalna", "Ambad", "Bhokardan", "Jafrabad", "Partur", "Ghansawangi", "Mantha", "Badnapur"],
+      "area_sq_km": 7718,
+      "population": 1959046,
+      "coordinates": {"lat": 19.8410, "lng": 75.8864},
+      "rainfall": {
+        "annual_normal_mm": 688.0,
+        "monsoon_normal_mm": 574.0,
+        "monsoon_actual_mm": 350.1,
+        "deficit_percentage": 39.0,
+        "spi_3month_estimate": -1.54,
+        "dry_spell_days_max": 28,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 6.2, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Feb", "normal_mm": 7.8, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 12.8, "actual_mm": 8.0, "deficit_pct": 37.5},
+          {"month": "Apr", "normal_mm": 29.5, "actual_mm": 11.2, "deficit_pct": 62.0},
+          {"month": "May", "normal_mm": 52.0, "actual_mm": 32.1, "deficit_pct": 38.3},
+          {"month": "Jun", "normal_mm": 124.0, "actual_mm": 76.9, "deficit_pct": 38.0},
+          {"month": "Jul", "normal_mm": 207.0, "actual_mm": 126.3, "deficit_pct": 39.0},
+          {"month": "Aug", "normal_mm": 193.0, "actual_mm": 117.7, "deficit_pct": 39.0},
+          {"month": "Sep", "normal_mm": 147.0, "actual_mm": 89.7, "deficit_pct": 39.0},
+          {"month": "Oct", "normal_mm": 57.0, "actual_mm": 34.0, "deficit_pct": 40.4},
+          {"month": "Nov", "normal_mm": 12.0, "actual_mm": 3.0, "deficit_pct": 75.0},
+          {"month": "Dec", "normal_mm": 5.0, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 14.2,
+        "avg_depth_post_monsoon_m": 10.1,
+        "water_table_fall_m": 2.4,
+        "depleted_wells_pct": 74.0,
+        "stress_index": 76.0,
+        "stage_of_extraction_pct": 89.2,
+        "critical_talukas_count": 4,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 10.1},
+          {"month": "Nov", "depth_m": 10.9},
+          {"month": "Dec", "depth_m": 11.8},
+          {"month": "Jan", "depth_m": 12.5},
+          {"month": "Feb", "depth_m": 13.1},
+          {"month": "Mar", "depth_m": 13.8},
+          {"month": "Apr", "depth_m": 14.1},
+          {"month": "May", "depth_m": 14.5},
+          {"month": "Jun", "depth_m": 14.3},
+          {"month": "Jul", "depth_m": 12.8},
+          {"month": "Aug", "depth_m": 11.4},
+          {"month": "Sep", "depth_m": 10.5}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 32.0,
+        "drinking_water_security_days": 120,
+        "dams": [
+          {"name": "Ghanewadi Dam", "river": "Kundalika", "capacity_mcft": 520, "live_storage_pct": 28.0, "dead_storage_alert": true, "status": "Critical"},
+          {"name": "Girija Medium Project", "river": "Girija", "capacity_mcft": 1260, "live_storage_pct": 34.2, "dead_storage_alert": false, "status": "Low"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 58.5,
+        "groundwater_component": 76.0,
+        "reservoir_component": 68.0,
+        "composite_score": 66.5,
+        "risk_level": "High"
+      },
+      "advisories": [
+        {"domain": "Tanker Contingency", "severity": "High", "text": "Prepare village-level tanker deployment plan for 42 vulnerable habitations in Ambad and Ghansawangi."},
+        {"domain": "Agriculture", "severity": "High", "text": "Advise against high-water-demanding summer cash crops (sugarcane); incentivize drought-hardy millets."},
+        {"domain": "Water Conservation", "severity": "Medium", "text": "Execute desiltation of farm ponds under Jalyukt Shivar Abhiyan 2.0 ahead of next monsoon."}
+      ]
+    },
+    {
+      "id": "beed",
+      "name": "Beed",
+      "name_mr": "बीड",
+      "talukas_count": 11,
+      "talukas": ["Beed", "Georai", "Majalgaon", "Ashti", "Patoda", "Shirur Kasar", "Kaij", "Dharur", "Parli Vaijnath", "Ambejogai", "Wadwani"],
+      "area_sq_km": 10693,
+      "population": 2585049,
+      "coordinates": {"lat": 18.9891, "lng": 75.7601},
+      "rainfall": {
+        "annual_normal_mm": 666.0,
+        "monsoon_normal_mm": 546.0,
+        "monsoon_actual_mm": 289.4,
+        "deficit_percentage": 47.0,
+        "spi_3month_estimate": -1.82,
+        "dry_spell_days_max": 34,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 5.1, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Feb", "normal_mm": 6.8, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 11.5, "actual_mm": 4.1, "deficit_pct": 64.3},
+          {"month": "Apr", "normal_mm": 28.2, "actual_mm": 8.5, "deficit_pct": 69.9},
+          {"month": "May", "normal_mm": 47.0, "actual_mm": 22.0, "deficit_pct": 53.2},
+          {"month": "Jun", "normal_mm": 119.0, "actual_mm": 64.3, "deficit_pct": 46.0},
+          {"month": "Jul", "normal_mm": 201.0, "actual_mm": 106.5, "deficit_pct": 47.0},
+          {"month": "Aug", "normal_mm": 184.0, "actual_mm": 97.5, "deficit_pct": 47.0},
+          {"month": "Sep", "normal_mm": 141.0, "actual_mm": 74.7, "deficit_pct": 47.0},
+          {"month": "Oct", "normal_mm": 53.0, "actual_mm": 26.5, "deficit_pct": 50.0},
+          {"month": "Nov", "normal_mm": 12.0, "actual_mm": 2.0, "deficit_pct": 83.3},
+          {"month": "Dec", "normal_mm": 5.0, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 16.5,
+        "avg_depth_post_monsoon_m": 12.8,
+        "water_table_fall_m": 3.2,
+        "depleted_wells_pct": 86.0,
+        "stress_index": 85.0,
+        "stage_of_extraction_pct": 98.6,
+        "critical_talukas_count": 6,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 12.8},
+          {"month": "Nov", "depth_m": 13.5},
+          {"month": "Dec", "depth_m": 14.2},
+          {"month": "Jan", "depth_m": 14.9},
+          {"month": "Feb", "depth_m": 15.6},
+          {"month": "Mar", "depth_m": 16.2},
+          {"month": "Apr", "depth_m": 16.7},
+          {"month": "May", "depth_m": 17.2},
+          {"month": "Jun", "depth_m": 16.9},
+          {"month": "Jul", "depth_m": 15.4},
+          {"month": "Aug", "depth_m": 14.1},
+          {"month": "Sep", "depth_m": 13.2}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 25.0,
+        "drinking_water_security_days": 85,
+        "dams": [
+          {"name": "Majalgaon Major Dam", "river": "Sindphana", "capacity_mcft": 16200, "live_storage_pct": 23.4, "dead_storage_alert": true, "status": "Critical"},
+          {"name": "Manjara Project (Dhanegaon)", "river": "Manjara", "capacity_mcft": 8700, "live_storage_pct": 21.0, "dead_storage_alert": true, "status": "Critical"},
+          {"name": "Bindusara Medium Dam", "river": "Bindusara", "capacity_mcft": 480, "live_storage_pct": 18.5, "dead_storage_alert": true, "status": "Alarming"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 70.5,
+        "groundwater_component": 85.0,
+        "reservoir_component": 75.0,
+        "composite_score": 76.5,
+        "risk_level": "Severe"
+      },
+      "advisories": [
+        {"domain": "Emergency", "severity": "Severe", "text": "URGENT: Composite score 76.5 enters Severe tier. Convene District Disaster Management Authority (DDMA) emergency meet."},
+        {"domain": "Drinking Water", "severity": "Severe", "text": "Enforce dead-storage preservation protocol in Majalgaon and Bindusara; halt non-drinking industrial extraction."},
+        {"domain": "Tanker Contingency", "severity": "High", "text": "Mobilize government-contracted water tankers for Ashti, Patoda and Shirur talukas immediately."}
+      ]
+    },
+    {
+      "id": "dharashiv",
+      "name": "Dharashiv",
+      "name_mr": "धाराशिव",
+      "talukas_count": 8,
+      "talukas": ["Dharashiv", "Tuljapur", "Omerga", "Lohara", "Kalamb", "Bhum", "Paranda", "Washi"],
+      "area_sq_km": 7569,
+      "population": 1657576,
+      "coordinates": {"lat": 18.1856, "lng": 76.0419},
+      "rainfall": {
+        "annual_normal_mm": 730.0,
+        "monsoon_normal_mm": 596.0,
+        "monsoon_actual_mm": 292.0,
+        "deficit_percentage": 51.0,
+        "spi_3month_estimate": -1.95,
+        "dry_spell_days_max": 38,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 4.8, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Feb", "normal_mm": 6.9, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 11.2, "actual_mm": 2.5, "deficit_pct": 77.7},
+          {"month": "Apr", "normal_mm": 24.1, "actual_mm": 5.0, "deficit_pct": 79.3},
+          {"month": "May", "normal_mm": 44.0, "actual_mm": 18.0, "deficit_pct": 59.1},
+          {"month": "Jun", "normal_mm": 116.0, "actual_mm": 56.8, "deficit_pct": 51.0},
+          {"month": "Jul", "normal_mm": 194.0, "actual_mm": 95.1, "deficit_pct": 51.0},
+          {"month": "Aug", "normal_mm": 180.0, "actual_mm": 88.2, "deficit_pct": 51.0},
+          {"month": "Sep", "normal_mm": 140.0, "actual_mm": 68.6, "deficit_pct": 51.0},
+          {"month": "Oct", "normal_mm": 51.0, "actual_mm": 22.0, "deficit_pct": 56.9},
+          {"month": "Nov", "normal_mm": 10.0, "actual_mm": 1.5, "deficit_pct": 85.0},
+          {"month": "Dec", "normal_mm": 4.0, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 17.8,
+        "avg_depth_post_monsoon_m": 14.1,
+        "water_table_fall_m": 3.6,
+        "depleted_wells_pct": 91.0,
+        "stress_index": 89.0,
+        "stage_of_extraction_pct": 104.2,
+        "critical_talukas_count": 5,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 14.1},
+          {"month": "Nov", "depth_m": 14.8},
+          {"month": "Dec", "depth_m": 15.5},
+          {"month": "Jan", "depth_m": 16.2},
+          {"month": "Feb", "depth_m": 16.9},
+          {"month": "Mar", "depth_m": 17.5},
+          {"month": "Apr", "depth_m": 18.0},
+          {"month": "May", "depth_m": 18.5},
+          {"month": "Jun", "depth_m": 18.2},
+          {"month": "Jul", "depth_m": 16.8},
+          {"month": "Aug", "depth_m": 15.4},
+          {"month": "Sep", "depth_m": 14.5}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 21.0,
+        "drinking_water_security_days": 70,
+        "dams": [
+          {"name": "Lower Terna Dam", "river": "Terna", "capacity_mcft": 4200, "live_storage_pct": 19.2, "dead_storage_alert": true, "status": "Critical"},
+          {"name": "Sina Kolegaon Major Project", "river": "Sina", "capacity_mcft": 5350, "live_storage_pct": 22.1, "dead_storage_alert": true, "status": "Critical"},
+          {"name": "Khasapur Medium Dam", "river": "Khasapur", "capacity_mcft": 890, "live_storage_pct": 17.8, "dead_storage_alert": true, "status": "Alarming"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 76.5,
+        "groundwater_component": 89.0,
+        "reservoir_component": 79.0,
+        "composite_score": 81.4,
+        "risk_level": "Severe"
+      },
+      "advisories": [
+        {"domain": "Emergency", "severity": "Severe", "text": "Highest regional risk index (81.4). Activate drought contingency cells across all 8 talukas."},
+        {"domain": "Groundwater", "severity": "Severe", "text": "Stage of extraction exceeds 104% (over-exploited). Prohibit new irrigation borewells under Maharashtra Groundwater Act."},
+        {"domain": "Fodder & Livestock", "severity": "High", "text": "Establish tehsil-level fodder camps and cattle shelters in Paranda and Bhum dry-zone pockets."}
+      ]
+    },
+    {
+      "id": "latur",
+      "name": "Latur",
+      "name_mr": "लातूर",
+      "talukas_count": 10,
+      "talukas": ["Latur", "Ausa", "Renapur", "Ahmedpur", "Chakur", "Shirur Anantpal", "Nilanga", "Deoni", "Udgir", "Jalkot"],
+      "area_sq_km": 7157,
+      "population": 2455543,
+      "coordinates": {"lat": 18.4088, "lng": 76.5604},
+      "rainfall": {
+        "annual_normal_mm": 782.0,
+        "monsoon_normal_mm": 658.0,
+        "monsoon_actual_mm": 375.1,
+        "deficit_percentage": 43.0,
+        "spi_3month_estimate": -1.68,
+        "dry_spell_days_max": 29,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 5.8, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Feb", "normal_mm": 7.2, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 11.9, "actual_mm": 6.0, "deficit_pct": 49.6},
+          {"month": "Apr", "normal_mm": 27.0, "actual_mm": 9.2, "deficit_pct": 65.9},
+          {"month": "May", "normal_mm": 51.0, "actual_mm": 29.0, "deficit_pct": 43.1},
+          {"month": "Jun", "normal_mm": 133.0, "actual_mm": 75.8, "deficit_pct": 43.0},
+          {"month": "Jul", "normal_mm": 221.0, "actual_mm": 126.0, "deficit_pct": 43.0},
+          {"month": "Aug", "normal_mm": 207.0, "actual_mm": 118.0, "deficit_pct": 43.0},
+          {"month": "Sep", "normal_mm": 164.0, "actual_mm": 93.5, "deficit_pct": 43.0},
+          {"month": "Oct", "normal_mm": 62.0, "actual_mm": 31.0, "deficit_pct": 50.0},
+          {"month": "Nov", "normal_mm": 13.0, "actual_mm": 3.0, "deficit_pct": 76.9},
+          {"month": "Dec", "normal_mm": 6.0, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 15.8,
+        "avg_depth_post_monsoon_m": 11.9,
+        "water_table_fall_m": 2.9,
+        "depleted_wells_pct": 82.0,
+        "stress_index": 82.0,
+        "stage_of_extraction_pct": 92.5,
+        "critical_talukas_count": 4,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 11.9},
+          {"month": "Nov", "depth_m": 12.6},
+          {"month": "Dec", "depth_m": 13.4},
+          {"month": "Jan", "depth_m": 14.1},
+          {"month": "Feb", "depth_m": 14.8},
+          {"month": "Mar", "depth_m": 15.5},
+          {"month": "Apr", "depth_m": 16.0},
+          {"month": "May", "depth_m": 16.5},
+          {"month": "Jun", "depth_m": 16.2},
+          {"month": "Jul", "depth_m": 14.8},
+          {"month": "Aug", "depth_m": 13.5},
+          {"month": "Sep", "depth_m": 12.4}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 28.0,
+        "drinking_water_security_days": 105,
+        "dams": [
+          {"name": "Manjara Barrage Scheme", "river": "Manjara", "capacity_mcft": 3200, "live_storage_pct": 26.5, "dead_storage_alert": true, "status": "Low"},
+          {"name": "Tawarja Medium Project", "river": "Tawarja", "capacity_mcft": 780, "live_storage_pct": 29.0, "dead_storage_alert": false, "status": "Low"},
+          {"name": "Gharani Project", "river": "Gharani", "capacity_mcft": 920, "live_storage_pct": 31.4, "dead_storage_alert": false, "status": "Low"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 64.5,
+        "groundwater_component": 82.0,
+        "reservoir_component": 72.0,
+        "composite_score": 72.1,
+        "risk_level": "High"
+      },
+      "advisories": [
+        {"domain": "Drinking Water", "severity": "High", "text": "Plan rotational water distribution for Latur Municipal Corporation to avert 2016-like acute train-water crises."},
+        {"domain": "Agriculture", "severity": "High", "text": "Promote soybean crop residue mulching and moisture-retention soil conditioners for Rabi season."},
+        {"domain": "Water Conservation", "severity": "Medium", "text": "Repair check dams and percolation tanks along Manjara river basin."}
+      ]
+    },
+    {
+      "id": "parbhani",
+      "name": "Parbhani",
+      "name_mr": "परभणी",
+      "talukas_count": 9,
+      "talukas": ["Parbhani", "Gangakhed", "Sonpeth", "Pathri", "Manwath", "Palam", "Selu", "Jintur", "Purna"],
+      "area_sq_km": 6511,
+      "population": 1836086,
+      "coordinates": {"lat": 19.2644, "lng": 76.7749},
+      "rainfall": {
+        "annual_normal_mm": 774.0,
+        "monsoon_normal_mm": 652.0,
+        "monsoon_actual_mm": 436.8,
+        "deficit_percentage": 33.0,
+        "spi_3month_estimate": -1.32,
+        "dry_spell_days_max": 25,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 5.4, "actual_mm": 1.0, "deficit_pct": 81.5},
+          {"month": "Feb", "normal_mm": 6.9, "actual_mm": 0.0, "deficit_pct": 100.0},
+          {"month": "Mar", "normal_mm": 11.4, "actual_mm": 9.2, "deficit_pct": 19.3},
+          {"month": "Apr", "normal_mm": 25.1, "actual_mm": 12.0, "deficit_pct": 52.2},
+          {"month": "May", "normal_mm": 49.0, "actual_mm": 35.0, "deficit_pct": 28.6},
+          {"month": "Jun", "normal_mm": 132.0, "actual_mm": 88.4, "deficit_pct": 33.0},
+          {"month": "Jul", "normal_mm": 240.0, "actual_mm": 160.8, "deficit_pct": 33.0},
+          {"month": "Aug", "normal_mm": 215.0, "actual_mm": 144.1, "deficit_pct": 33.0},
+          {"month": "Sep", "normal_mm": 173.0, "actual_mm": 115.9, "deficit_pct": 33.0},
+          {"month": "Oct", "normal_mm": 65.0, "actual_mm": 42.0, "deficit_pct": 35.4},
+          {"month": "Nov", "normal_mm": 13.0, "actual_mm": 4.5, "deficit_pct": 65.4},
+          {"month": "Dec", "normal_mm": 6.0, "actual_mm": 0.0, "deficit_pct": 100.0}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 13.4,
+        "avg_depth_post_monsoon_m": 9.2,
+        "water_table_fall_m": 2.1,
+        "depleted_wells_pct": 68.0,
+        "stress_index": 72.0,
+        "stage_of_extraction_pct": 84.1,
+        "critical_talukas_count": 3,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 9.2},
+          {"month": "Nov", "depth_m": 9.9},
+          {"month": "Dec", "depth_m": 10.7},
+          {"month": "Jan", "depth_m": 11.5},
+          {"month": "Feb", "depth_m": 12.2},
+          {"month": "Mar", "depth_m": 12.9},
+          {"month": "Apr", "depth_m": 13.3},
+          {"month": "May", "depth_m": 13.7},
+          {"month": "Jun", "depth_m": 13.4},
+          {"month": "Jul", "depth_m": 11.9},
+          {"month": "Aug", "depth_m": 10.4},
+          {"month": "Sep", "depth_m": 9.5}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 38.0,
+        "drinking_water_security_days": 145,
+        "dams": [
+          {"name": "Lower Dudhana Project", "river": "Dudhana", "capacity_mcft": 7950, "live_storage_pct": 36.8, "dead_storage_alert": false, "status": "Low"},
+          {"name": "Karpara Medium Dam", "river": "Karpara", "capacity_mcft": 640, "live_storage_pct": 41.0, "dead_storage_alert": false, "status": "Moderate"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 49.5,
+        "groundwater_component": 72.0,
+        "reservoir_component": 62.0,
+        "composite_score": 59.9,
+        "risk_level": "High"
+      },
+      "advisories": [
+        {"domain": "Agriculture", "severity": "Medium", "text": "Coordinate release from Lower Dudhana for critical winter canal rotations in Selu and Pathri."},
+        {"domain": "Groundwater", "severity": "Medium", "text": "Monitor groundwater draw in sugarcane belts of Gangakhed along Godavari floodplains."},
+        {"domain": "Water Conservation", "severity": "Medium", "text": "Scale up artificial recharge shafts in hard basalt zones."}
+      ]
+    },
+    {
+      "id": "nanded",
+      "name": "Nanded",
+      "name_mr": "नांदेड",
+      "talukas_count": 16,
+      "talukas": ["Nanded", "Biloli", "Mukhed", "Kandhar", "Loha", "Hadgaon", "Bhokar", "Deglur", "Kinwat", "Mudkhed", "Himayatnagar", "Mahur", "Dharmabad", "Umri", "Naigaon", "Ardhapur"],
+      "area_sq_km": 10528,
+      "population": 3361292,
+      "coordinates": {"lat": 19.1596, "lng": 77.3178},
+      "rainfall": {
+        "annual_normal_mm": 898.0,
+        "monsoon_normal_mm": 776.0,
+        "monsoon_actual_mm": 628.6,
+        "deficit_percentage": 19.0,
+        "spi_3month_estimate": -0.68,
+        "dry_spell_days_max": 16,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 7.1, "actual_mm": 4.0, "deficit_pct": 43.7},
+          {"month": "Feb", "normal_mm": 8.5, "actual_mm": 2.0, "deficit_pct": 76.5},
+          {"month": "Mar", "normal_mm": 13.8, "actual_mm": 15.0, "deficit_pct": -8.7},
+          {"month": "Apr", "normal_mm": 28.9, "actual_mm": 21.0, "deficit_pct": 27.3},
+          {"month": "May", "normal_mm": 55.0, "actual_mm": 48.0, "deficit_pct": 12.7},
+          {"month": "Jun", "normal_mm": 149.0, "actual_mm": 120.7, "deficit_pct": 19.0},
+          {"month": "Jul", "normal_mm": 269.0, "actual_mm": 217.9, "deficit_pct": 19.0},
+          {"month": "Aug", "normal_mm": 232.0, "actual_mm": 187.9, "deficit_pct": 19.0},
+          {"month": "Sep", "normal_mm": 180.0, "actual_mm": 145.8, "deficit_pct": 19.0},
+          {"month": "Oct", "normal_mm": 70.0, "actual_mm": 58.0, "deficit_pct": 17.1},
+          {"month": "Nov", "normal_mm": 16.0, "actual_mm": 10.0, "deficit_pct": 37.5},
+          {"month": "Dec", "normal_mm": 8.0, "actual_mm": 3.0, "deficit_pct": 62.5}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 11.2,
+        "avg_depth_post_monsoon_m": 7.1,
+        "water_table_fall_m": 1.2,
+        "depleted_wells_pct": 45.0,
+        "stress_index": 51.0,
+        "stage_of_extraction_pct": 67.8,
+        "critical_talukas_count": 1,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 7.1},
+          {"month": "Nov", "depth_m": 7.8},
+          {"month": "Dec", "depth_m": 8.5},
+          {"month": "Jan", "depth_m": 9.2},
+          {"month": "Feb", "depth_m": 9.8},
+          {"month": "Mar", "depth_m": 10.4},
+          {"month": "Apr", "depth_m": 10.8},
+          {"month": "May", "depth_m": 11.2},
+          {"month": "Jun", "depth_m": 10.9},
+          {"month": "Jul", "depth_m": 9.5},
+          {"month": "Aug", "depth_m": 8.1},
+          {"month": "Sep", "depth_m": 7.4}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 58.0,
+        "drinking_water_security_days": 210,
+        "dams": [
+          {"name": "Vishnupuri Barrage (Godavari)", "river": "Godavari", "capacity_mcft": 2850, "live_storage_pct": 68.2, "dead_storage_alert": false, "status": "Good"},
+          {"name": "Upper Painganga (Isapur)", "river": "Painganga", "capacity_mcft": 34100, "live_storage_pct": 55.4, "dead_storage_alert": false, "status": "Moderate"},
+          {"name": "Kundalika Medium Dam", "river": "Kundalika", "capacity_mcft": 940, "live_storage_pct": 51.0, "dead_storage_alert": false, "status": "Moderate"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 28.5,
+        "groundwater_component": 51.0,
+        "reservoir_component": 42.0,
+        "composite_score": 39.1,
+        "risk_level": "Moderate"
+      },
+      "advisories": [
+        {"domain": "Water Conservation", "severity": "Low", "text": "Maintain watershed treatment in hilly Kinwat and Mahur blocks to preserve baseflow."},
+        {"domain": "Agriculture", "severity": "Medium", "text": "Encourage timely sowing of cotton and turmeric with micro-irrigation systems."},
+        {"domain": "Drinking Water", "severity": "Low", "text": "Vishnupuri barrage maintains adequate buffer for Nanded Waghala Municipal Corporation."}
+      ]
+    },
+    {
+      "id": "hingoli",
+      "name": "Hingoli",
+      "name_mr": "हिंगोली",
+      "talukas_count": 5,
+      "talukas": ["Hingoli", "Kalamnuri", "Basmath", "Aundha Nagnath", "Sengaon"],
+      "area_sq_km": 4658,
+      "population": 1177345,
+      "coordinates": {"lat": 19.7188, "lng": 77.1485},
+      "rainfall": {
+        "annual_normal_mm": 882.0,
+        "monsoon_normal_mm": 765.0,
+        "monsoon_actual_mm": 604.4,
+        "deficit_percentage": 21.0,
+        "spi_3month_estimate": -0.74,
+        "dry_spell_days_max": 18,
+        "monthly_comparison": [
+          {"month": "Jan", "normal_mm": 6.3, "actual_mm": 2.5, "deficit_pct": 60.3},
+          {"month": "Feb", "normal_mm": 7.9, "actual_mm": 1.0, "deficit_pct": 87.3},
+          {"month": "Mar", "normal_mm": 12.1, "actual_mm": 14.0, "deficit_pct": -15.7},
+          {"month": "Apr", "normal_mm": 27.0, "actual_mm": 18.0, "deficit_pct": 33.3},
+          {"month": "May", "normal_mm": 54.0, "actual_mm": 42.0, "deficit_pct": 22.2},
+          {"month": "Jun", "normal_mm": 146.0, "actual_mm": 115.3, "deficit_pct": 21.0},
+          {"month": "Jul", "normal_mm": 255.0, "actual_mm": 201.5, "deficit_pct": 21.0},
+          {"month": "Aug", "normal_mm": 226.0, "actual_mm": 178.5, "deficit_pct": 21.0},
+          {"month": "Sep", "normal_mm": 184.0, "actual_mm": 145.4, "deficit_pct": 21.0},
+          {"month": "Oct", "normal_mm": 68.0, "actual_mm": 52.0, "deficit_pct": 23.5},
+          {"month": "Nov", "normal_mm": 14.0, "actual_mm": 8.0, "deficit_pct": 42.9},
+          {"month": "Dec", "normal_mm": 7.0, "actual_mm": 2.0, "deficit_pct": 71.4}
+        ]
+      },
+      "groundwater": {
+        "avg_depth_pre_monsoon_m": 12.1,
+        "avg_depth_post_monsoon_m": 8.0,
+        "water_table_fall_m": 1.4,
+        "depleted_wells_pct": 51.0,
+        "stress_index": 56.0,
+        "stage_of_extraction_pct": 71.2,
+        "critical_talukas_count": 1,
+        "monthly_trend": [
+          {"month": "Oct", "depth_m": 8.0},
+          {"month": "Nov", "depth_m": 8.7},
+          {"month": "Dec", "depth_m": 9.4},
+          {"month": "Jan", "depth_m": 10.1},
+          {"month": "Feb", "depth_m": 10.7},
+          {"month": "Mar", "depth_m": 11.3},
+          {"month": "Apr", "depth_m": 11.7},
+          {"month": "May", "depth_m": 12.1},
+          {"month": "Jun", "depth_m": 11.8},
+          {"month": "Jul", "depth_m": 10.4},
+          {"month": "Aug", "depth_m": 9.1},
+          {"month": "Sep", "depth_m": 8.3}
+        ]
+      },
+      "reservoirs": {
+        "aggregate_storage_pct": 52.0,
+        "drinking_water_security_days": 180,
+        "dams": [
+          {"name": "Yeldari Major Dam", "river": "Purna", "capacity_mcft": 28700, "live_storage_pct": 54.0, "dead_storage_alert": false, "status": "Moderate"},
+          {"name": "Siddheshwar Dam", "river": "Purna", "capacity_mcft": 7500, "live_storage_pct": 48.5, "dead_storage_alert": false, "status": "Moderate"}
+        ]
+      },
+      "risk": {
+        "rainfall_component": 31.5,
+        "groundwater_component": 56.0,
+        "reservoir_component": 48.0,
+        "composite_score": 43.4,
+        "risk_level": "Moderate"
+      },
+      "advisories": [
+        {"domain": "Agriculture", "severity": "Low", "text": "Maintain optimum canal release schedules from Yeldari and Siddheshwar for turmeric crops in Basmath."},
+        {"domain": "Drinking Water", "severity": "Low", "text": "Drinking water reserves remain within safe parameters for urban and rural habitations."},
+        {"domain": "Water Conservation", "severity": "Medium", "text": "Construct continuous contour trenches (CCT) along Aundha Nagnath ridge lines."}
+      ]
+    }
+  ],
+  "methodology_and_sources": {
+    "rainfall": {
+      "source_agency": "India Meteorological Department (IMD) / Mahavedh (Synthesized for Demo)",
+      "metric": "Percent Departure from Long Period Average (LPA)",
+      "classification": {
+        "Excess": ">= +20%",
+        "Normal": "-19% to +19%",
+        "Deficient": "-59% to -20%",
+        "Large Deficient": "-99% to -60%",
+        "No Rain": "-100%"
+      }
+    },
+    "groundwater": {
+      "source_agency": "Groundwater Surveys and Development Agency (GSDA), GoM / CGWB (Synthesized for Demo)",
+      "metric": "Water table depth (m bgl) & Fall compared to decadal average",
+      "stress_index_derivation": "Normalized depth drop (0-50%) + % depleted wells (0-50%)"
+    },
+    "reservoir": {
+      "source_agency": "Water Resources Department (WRD), Government of Maharashtra (Synthesized for Demo)",
+      "metric": "Percentage live storage vs gross design capacity"
+    },
+    "drought_risk_composite": {
+      "method": "Multi-Criteria Decision Analysis (MCDA) Weighted Linear Combination",
+      "weights": "Rainfall (0.45) + Groundwater (0.35) + Reservoir (0.20)",
+      "rationale": "Prioritizes immediate meteorological failure, balanced with buffer vulnerability (aquifers and storage)"
+    }
+  }
+}

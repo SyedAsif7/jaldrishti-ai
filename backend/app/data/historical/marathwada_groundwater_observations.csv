@@ -1,0 +1,241 @@
+district_id,district_name,year,season,avg_depth_m_bgl,fall_vs_normal_m,depleted_wells_pct,stress_index,data_source
+beed,Beed,2010,PRE_MONSOON,15.59,0.0,31.7,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2010,POST_MONSOON,11.24,0.0,24.5,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2011,PRE_MONSOON,16.89,1.19,52.5,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2011,POST_MONSOON,12.88,0.58,42.9,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2012,PRE_MONSOON,17.5,1.8,67.6,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2012,POST_MONSOON,14.29,1.99,55.5,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2013,PRE_MONSOON,16.35,0.65,48.9,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2013,POST_MONSOON,12.49,0.19,35.1,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2014,PRE_MONSOON,18.75,3.05,75.0,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2014,POST_MONSOON,14.48,2.18,58.6,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2015,PRE_MONSOON,18.66,2.96,73.4,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2015,POST_MONSOON,14.86,2.56,63.8,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2016,PRE_MONSOON,15.12,0.0,39.9,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2016,POST_MONSOON,12.13,0.0,28.1,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2017,PRE_MONSOON,16.23,0.53,51.8,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2017,POST_MONSOON,12.75,0.45,44.5,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2018,PRE_MONSOON,18.54,2.84,72.0,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2018,POST_MONSOON,14.36,2.06,60.2,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2019,PRE_MONSOON,15.94,0.24,41.3,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2019,POST_MONSOON,11.86,0.0,38.0,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2020,PRE_MONSOON,15.0,0.0,35.3,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2020,POST_MONSOON,11.37,0.0,29.4,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2021,PRE_MONSOON,14.97,0.0,32.6,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2021,POST_MONSOON,11.02,0.0,26.5,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2022,PRE_MONSOON,15.58,0.0,41.6,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2022,POST_MONSOON,12.54,0.24,33.8,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2023,PRE_MONSOON,18.08,2.38,69.4,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2023,POST_MONSOON,14.12,1.82,54.2,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2024,PRE_MONSOON,17.26,1.56,60.1,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+beed,Beed,2024,POST_MONSOON,13.18,0.88,50.1,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2010,PRE_MONSOON,16.45,0.0,32.9,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2010,POST_MONSOON,13.31,0.0,25.4,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2011,PRE_MONSOON,17.93,0.93,51.2,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2011,POST_MONSOON,14.35,0.75,42.4,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2012,PRE_MONSOON,19.04,2.04,66.9,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2012,POST_MONSOON,15.05,1.45,53.0,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2013,PRE_MONSOON,16.92,0.0,45.2,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2013,POST_MONSOON,13.3,0.0,35.5,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2014,PRE_MONSOON,19.51,2.51,74.8,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2014,POST_MONSOON,15.31,1.71,57.4,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2015,PRE_MONSOON,19.85,2.85,74.8,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2015,POST_MONSOON,16.24,2.64,59.3,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2016,PRE_MONSOON,16.7,0.0,38.8,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2016,POST_MONSOON,13.57,0.0,29.3,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2017,PRE_MONSOON,17.31,0.31,50.8,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2017,POST_MONSOON,14.58,0.98,41.5,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2018,PRE_MONSOON,19.63,2.63,68.9,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2018,POST_MONSOON,15.15,1.55,57.6,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2019,PRE_MONSOON,16.56,0.0,41.8,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2019,POST_MONSOON,13.2,0.0,31.9,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2020,PRE_MONSOON,16.06,0.0,35.2,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2020,POST_MONSOON,12.81,0.0,23.7,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2021,PRE_MONSOON,16.39,0.0,34.4,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2021,POST_MONSOON,13.18,0.0,25.6,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2022,PRE_MONSOON,17.0,0.0,43.5,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2022,POST_MONSOON,13.93,0.33,33.5,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2023,PRE_MONSOON,18.93,1.93,66.8,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2023,POST_MONSOON,15.8,2.2,54.7,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2024,PRE_MONSOON,17.61,0.61,56.8,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+dharashiv,Dharashiv,2024,POST_MONSOON,14.62,1.02,50.2,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2010,PRE_MONSOON,12.68,0.0,34.8,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2010,POST_MONSOON,8.79,0.0,21.7,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2011,PRE_MONSOON,14.23,0.83,52.8,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2011,POST_MONSOON,10.32,0.72,39.3,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2012,PRE_MONSOON,15.53,2.13,72.6,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2012,POST_MONSOON,10.88,1.28,55.7,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2013,PRE_MONSOON,13.21,0.0,47.4,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2013,POST_MONSOON,9.54,0.0,37.2,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2014,PRE_MONSOON,15.7,2.3,73.3,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2014,POST_MONSOON,11.34,1.74,57.5,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2015,PRE_MONSOON,16.49,3.09,75.1,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2015,POST_MONSOON,11.94,2.34,61.2,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2016,PRE_MONSOON,13.23,0.0,39.0,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2016,POST_MONSOON,9.2,0.0,28.1,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2017,PRE_MONSOON,14.13,0.73,53.5,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2017,POST_MONSOON,10.21,0.61,39.2,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2018,PRE_MONSOON,16.08,2.68,72.0,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2018,POST_MONSOON,11.66,2.06,55.6,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2019,PRE_MONSOON,13.19,0.0,38.9,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2019,POST_MONSOON,9.34,0.0,33.0,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2020,PRE_MONSOON,13.12,0.0,36.7,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2020,POST_MONSOON,9.57,0.0,29.7,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2021,PRE_MONSOON,12.58,0.0,28.7,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2021,POST_MONSOON,8.63,0.0,23.7,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2022,PRE_MONSOON,13.77,0.37,41.8,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2022,POST_MONSOON,9.36,0.0,31.8,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2023,PRE_MONSOON,15.66,2.26,69.6,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2023,POST_MONSOON,11.77,2.17,54.4,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2024,PRE_MONSOON,15.0,1.6,57.3,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+jalna,Jalna,2024,POST_MONSOON,11.33,1.73,45.3,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2010,PRE_MONSOON,14.71,0.0,32.0,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2010,POST_MONSOON,10.57,0.0,23.4,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2011,PRE_MONSOON,16.7,1.7,52.6,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2011,POST_MONSOON,12.05,0.65,43.6,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2012,PRE_MONSOON,17.04,2.04,67.3,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2012,POST_MONSOON,13.07,1.67,53.4,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2013,PRE_MONSOON,15.8,0.8,45.2,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2013,POST_MONSOON,11.15,0.0,35.8,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2014,PRE_MONSOON,17.76,2.76,70.9,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2014,POST_MONSOON,13.17,1.77,57.8,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2015,PRE_MONSOON,18.33,3.33,74.9,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2015,POST_MONSOON,14.06,2.66,60.4,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2016,PRE_MONSOON,14.91,0.0,37.2,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2016,POST_MONSOON,11.33,0.0,27.9,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2017,PRE_MONSOON,16.11,1.11,51.3,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2017,POST_MONSOON,11.78,0.38,40.6,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2018,PRE_MONSOON,18.02,3.02,71.3,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2018,POST_MONSOON,13.09,1.69,55.1,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2019,PRE_MONSOON,15.14,0.14,40.7,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2019,POST_MONSOON,11.46,0.06,29.0,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2020,PRE_MONSOON,14.28,0.0,38.3,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2020,POST_MONSOON,11.06,0.0,29.4,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2021,PRE_MONSOON,13.94,0.0,29.1,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2021,POST_MONSOON,10.94,0.0,26.3,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2022,PRE_MONSOON,14.8,0.0,39.3,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2022,POST_MONSOON,11.33,0.0,31.7,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2023,PRE_MONSOON,17.04,2.04,65.3,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2023,POST_MONSOON,12.95,1.55,52.5,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2024,PRE_MONSOON,16.28,1.28,60.3,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+latur,Latur,2024,POST_MONSOON,12.53,1.13,49.1,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2010,PRE_MONSOON,11.47,0.0,32.7,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2010,POST_MONSOON,8.67,0.0,24.9,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2011,PRE_MONSOON,13.83,1.23,53.8,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2011,POST_MONSOON,9.6,0.9,42.1,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2012,PRE_MONSOON,15.01,2.41,68.7,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2012,POST_MONSOON,10.54,1.84,52.2,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2013,PRE_MONSOON,12.53,0.0,42.6,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2013,POST_MONSOON,8.83,0.13,37.6,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2014,PRE_MONSOON,14.96,2.36,74.5,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2014,POST_MONSOON,10.56,1.86,57.9,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2015,PRE_MONSOON,15.31,2.71,72.2,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2015,POST_MONSOON,11.0,2.3,65.0,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2016,PRE_MONSOON,12.39,0.0,34.4,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2016,POST_MONSOON,8.64,0.0,26.9,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2017,PRE_MONSOON,13.13,0.53,50.6,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2017,POST_MONSOON,9.31,0.61,38.9,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2018,PRE_MONSOON,15.07,2.47,72.5,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2018,POST_MONSOON,10.86,2.16,60.1,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2019,PRE_MONSOON,13.16,0.56,41.9,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2019,POST_MONSOON,8.49,0.0,33.6,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2020,PRE_MONSOON,12.37,0.0,37.0,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2020,POST_MONSOON,8.32,0.0,26.5,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2021,PRE_MONSOON,11.52,0.0,30.9,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2021,POST_MONSOON,7.98,0.0,22.9,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2022,PRE_MONSOON,12.85,0.25,46.1,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2022,POST_MONSOON,8.14,0.0,34.4,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2023,PRE_MONSOON,14.87,2.27,68.7,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2023,POST_MONSOON,10.26,1.56,54.6,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2024,PRE_MONSOON,14.25,1.65,59.1,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+parbhani,Parbhani,2024,POST_MONSOON,9.39,0.69,47.6,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2010,PRE_MONSOON,10.94,0.0,34.0,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2010,POST_MONSOON,6.69,0.0,27.7,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2011,PRE_MONSOON,13.11,1.11,53.0,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2011,POST_MONSOON,7.89,0.0,41.1,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2012,PRE_MONSOON,14.59,2.59,66.2,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2012,POST_MONSOON,9.23,1.33,53.1,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2013,PRE_MONSOON,12.42,0.42,44.0,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2013,POST_MONSOON,8.48,0.58,36.3,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2014,PRE_MONSOON,14.52,2.52,70.1,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2014,POST_MONSOON,10.06,2.16,59.8,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2015,PRE_MONSOON,14.72,2.72,71.4,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2015,POST_MONSOON,10.25,2.35,61.2,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2016,PRE_MONSOON,11.91,0.0,42.0,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2016,POST_MONSOON,7.6,0.0,29.1,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2017,PRE_MONSOON,12.55,0.55,50.5,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2017,POST_MONSOON,8.52,0.62,41.0,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2018,PRE_MONSOON,15.07,3.07,72.1,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2018,POST_MONSOON,9.76,1.86,56.1,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2019,PRE_MONSOON,12.07,0.07,38.5,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2019,POST_MONSOON,7.81,0.0,32.9,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2020,PRE_MONSOON,11.57,0.0,34.7,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2020,POST_MONSOON,6.81,0.0,30.6,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2021,PRE_MONSOON,11.35,0.0,32.0,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2021,POST_MONSOON,6.67,0.0,27.0,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2022,PRE_MONSOON,11.99,0.0,41.3,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2022,POST_MONSOON,7.54,0.0,29.7,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2023,PRE_MONSOON,14.63,2.63,70.4,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2023,POST_MONSOON,9.54,1.64,53.5,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2024,PRE_MONSOON,13.5,1.5,59.0,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+chhatrapati-sambhajinagar,Chhatrapati Sambhajinagar,2024,POST_MONSOON,8.69,0.79,47.5,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2010,PRE_MONSOON,10.71,0.0,34.8,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2010,POST_MONSOON,6.85,0.0,22.4,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2011,PRE_MONSOON,12.39,1.09,51.6,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2011,POST_MONSOON,8.56,1.06,44.7,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2012,PRE_MONSOON,13.98,2.68,66.2,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2012,POST_MONSOON,9.75,2.25,55.1,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2013,PRE_MONSOON,12.23,0.93,44.7,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2013,POST_MONSOON,7.62,0.12,36.9,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2014,PRE_MONSOON,14.04,2.74,75.2,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2014,POST_MONSOON,9.44,1.94,61.2,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2015,PRE_MONSOON,14.48,3.18,75.5,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2015,POST_MONSOON,9.92,2.42,60.7,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2016,PRE_MONSOON,11.82,0.52,32.8,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2016,POST_MONSOON,7.41,0.0,26.6,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2017,PRE_MONSOON,12.12,0.82,50.9,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2017,POST_MONSOON,8.52,1.02,39.5,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2018,PRE_MONSOON,14.25,2.95,68.7,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2018,POST_MONSOON,9.81,2.31,56.6,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2019,PRE_MONSOON,11.31,0.01,39.6,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2019,POST_MONSOON,7.74,0.24,34.1,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2020,PRE_MONSOON,11.06,0.0,33.7,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2020,POST_MONSOON,6.85,0.0,26.2,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2021,PRE_MONSOON,9.85,0.0,33.6,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2021,POST_MONSOON,6.64,0.0,23.6,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2022,PRE_MONSOON,11.87,0.57,40.9,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2022,POST_MONSOON,7.21,0.0,32.8,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2023,PRE_MONSOON,13.25,1.95,68.5,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2023,POST_MONSOON,9.08,1.58,53.8,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2024,PRE_MONSOON,12.73,1.43,59.5,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+hingoli,Hingoli,2024,POST_MONSOON,8.67,1.17,47.1,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2010,PRE_MONSOON,9.65,0.0,32.6,24.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2010,POST_MONSOON,5.89,0.0,25.7,17.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2011,PRE_MONSOON,11.18,0.78,54.2,47.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2011,POST_MONSOON,7.27,0.67,40.8,37.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2012,PRE_MONSOON,12.74,2.34,67.1,65.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2012,POST_MONSOON,7.73,1.13,55.1,52.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2013,PRE_MONSOON,10.53,0.13,47.5,40.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2013,POST_MONSOON,6.74,0.14,38.0,30.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2014,PRE_MONSOON,12.9,2.5,72.8,71.5,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2014,POST_MONSOON,8.98,2.38,58.4,57.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2015,PRE_MONSOON,13.18,2.78,77.2,75.2,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2015,POST_MONSOON,9.02,2.42,60.5,60.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2016,PRE_MONSOON,9.61,0.0,36.9,31.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2016,POST_MONSOON,6.51,0.0,28.5,23.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2017,PRE_MONSOON,11.29,0.89,49.8,46.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2017,POST_MONSOON,6.59,0.0,39.5,36.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2018,PRE_MONSOON,13.16,2.76,66.3,69.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2018,POST_MONSOON,8.58,1.98,55.2,56.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2019,PRE_MONSOON,10.57,0.17,41.7,33.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2019,POST_MONSOON,6.4,0.0,31.6,25.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2020,PRE_MONSOON,9.79,0.0,33.3,28.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2020,POST_MONSOON,6.67,0.07,26.6,21.0,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2021,PRE_MONSOON,10.1,0.0,29.4,22.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2021,POST_MONSOON,6.0,0.0,22.0,16.1,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2022,PRE_MONSOON,10.68,0.28,41.2,35.6,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2022,POST_MONSOON,6.47,0.0,34.5,26.9,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2023,PRE_MONSOON,12.54,2.14,65.0,65.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2023,POST_MONSOON,8.52,1.92,52.6,52.8,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2024,PRE_MONSOON,12.16,1.76,61.7,56.3,GSDA GoM / CGWB Maharashtra Ground Water Year Book
+nanded,Nanded,2024,POST_MONSOON,7.64,1.04,50.5,44.7,GSDA GoM / CGWB Maharashtra Ground Water Year Book
