@@ -10,11 +10,13 @@ import {
   Download,
   CheckCircle2,
   AlertTriangle,
+  Sliders,
   Layers,
   ArrowRight,
   FileText,
   Landmark,
-  Compass
+  Compass,
+  Printer
 } from 'lucide-react';
 import { District, PageId, Language } from '../../types';
 import { getCsvDownloadUrl } from '../../services/api';
@@ -40,7 +42,7 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
 
   if (!isOpen) return null;
 
-  const totalSteps = 6;
+  const totalSteps = 7;
   const parbhaniDistrict = districts.find(d => d.id === 'parbhani') || districts[0];
 
   const handleNext = () => {
@@ -76,7 +78,7 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
         onSelectDistrict('parbhani');
         break;
       case 4:
-        onNavigatePage('forecast');
+        onNavigatePage('groundwater');
         onSelectDistrict('parbhani');
         break;
       case 5:
@@ -84,6 +86,10 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
         onSelectDistrict('parbhani');
         break;
       case 6:
+        onNavigatePage('alerts');
+        onSelectDistrict('parbhani');
+        break;
+      case 7:
         onNavigatePage('reports');
         onSelectDistrict('parbhani');
         break;
@@ -104,7 +110,7 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] uppercase font-bold tracking-wider text-[#A3C4BC]">
-                  Evaluator Walkthrough
+                  Competition Evaluation Tour
                 </span>
                 <span className="px-1.5 py-0.2 text-[9px] font-bold bg-[#1B3F38] text-[#8FA86E] border border-[#2D6459] rounded">
                   Parbhani Case Study
@@ -133,45 +139,47 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
 
         {/* Step Content */}
         <div className="p-6 overflow-y-auto space-y-4 flex-1 text-sm text-[#25332F]">
-          {/* Step 1: Regional & Innovation Context */}
+          {/* Step 1: Open the Marathwada Overview */}
           {currentStep === 1 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
-                <span>Step 1 of {totalSteps}: Innovation Scope & Problem Statement</span>
+                <span>Step 1 of {totalSteps}: Open the Marathwada Regional Overview</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                Drought Resilience for 8 Districts of Marathwada, Maharashtra
+                Regional Water & Drought Intelligence Overview
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                Marathwada faces recurring drought, acute rain-shadow deficits, rapid groundwater depletion, and fragile reservoir storage. JalDrishti AI was conceived for the <strong>Seva First Innovation Challenge 2026</strong> as an individual technical innovation project to unify disparate meteorological, hydrogeological, and surface storage data into an explainable, decision-ready intelligence platform.
+                Marathwada faces recurring drought, acute rain-shadow deficits, rapid groundwater depletion, and fragile reservoir storage. JalDrishti AI unifies disparate meteorological, hydrogeological, and surface storage data across all 8 districts:
               </p>
 
               <div className="p-4 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0] space-y-2 text-xs">
                 <div className="font-semibold text-[#234F46] flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#728A53]" />
-                  Three-Tier Environmental Intelligence Architecture:
+                  Eight Monitored Districts of Marathwada:
                 </div>
-                <ul className="space-y-1.5 text-[#68736E] pl-4 list-disc text-[11px]">
-                  <li><strong>Tier 1: Measured Observations</strong> — Historical IMD rainfall (2000–2024), GSDA water table depths, and WRD reservoir storage records.</li>
-                  <li><strong>Tier 2: Multi-Criteria Decision Analysis (MCDA)</strong> — Rule-based composite risk index with policy-calibrated, transparent weights.</li>
-                  <li><strong>Tier 3: Validated Machine Learning</strong> — Supervised HistGradientBoostingRegressor and Ridge models with 95% confidence intervals and holdout benchmarks.</li>
-                </ul>
+                <div className="text-[11px] text-[#68736E] leading-relaxed">
+                  Chhatrapati Sambhajinagar · Jalna · Beed · Dharashiv · Latur · Nanded · Parbhani · Hingoli (76 talukas, Godavari basin).
+                </div>
+                <div className="pt-1 text-[11px] text-[#68736E] border-t border-[#E3DDD0]">
+                  • Regional Average Risk Score: <strong>58.4 / 100 (High Risk)</strong><br />
+                  • 2 Severe Districts (Beed, Dharashiv), 3 High (Jalna, Latur, Parbhani), 3 Moderate.
+                </div>
               </div>
             </div>
           )}
 
-          {/* Step 2: Parbhani Selection */}
+          {/* Step 2: Select Parbhani */}
           {currentStep === 2 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
                 <MapPin className="w-3.5 h-3.5 text-[#234F46]" />
-                <span>Step 2 of {totalSteps}: Parbhani District Focus Case Study</span>
+                <span>Step 2 of {totalSteps}: Select Parbhani District on GIS Map</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                Focus District: Parbhani (High Drought Risk · 59.9/100)
+                Focus District: Parbhani (Composite Risk Score: 59.9 / 100)
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                We select <strong>Parbhani</strong> to demonstrate the platform’s localized multi-criteria analysis. Located in the Godavari basin, Parbhani exhibits moderate monsoon rainfall but severe late-monsoon depletion, high well extraction fractions, and critical storage depletion in the Lower Dudhna and Yeldari catchment.
+                Parbhani has been selected on the GIS Choropleth map. The platform automatically synchronizes the selected district across all GIS polygon layers, indicators, and charts.
               </p>
 
               <div className="grid grid-cols-3 gap-3 text-center text-xs">
@@ -200,123 +208,178 @@ export const CompetitionDemoTour: React.FC<CompetitionDemoTourProps> = ({
             </div>
           )}
 
-          {/* Step 3: Rainfall Deficit Analysis */}
+          {/* Step 3: Explain Rainfall Deviation */}
           {currentStep === 3 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
                 <CloudRain className="w-3.5 h-3.5 text-[#267D9D]" />
-                <span>Step 3 of {totalSteps}: Hydrological Rainfall Intelligence</span>
+                <span>Step 3 of {totalSteps}: Explain Rainfall Deviation & SPI</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                IMD Climatology Departure & SPI Index
+                IMD Climatology Departure & Dry-Spell Duration
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                Parbhani’s monsoon actual was <strong>514.8 mm</strong> against a 50-year normal of <strong>774.2 mm</strong> (<strong>-33.5% departure</strong>). IMD standard classification: <em>Deficient</em>.
+                In Parbhani, monsoon precipitation was <strong>514.8 mm</strong> compared to the 50-year normal Long Period Average (LPA) of <strong>774.2 mm</strong> (a <strong>-33.5% departure</strong>, classified by IMD as <em>Deficient</em>).
               </p>
 
               <div className="p-3.5 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0] space-y-2 text-xs">
-                <div className="font-semibold text-[#25332F]">Key Hydrological Observations:</div>
+                <div className="font-semibold text-[#25332F]">Hydrological Characteristics:</div>
                 <ul className="space-y-1 text-[#68736E] text-[11px] list-disc pl-4">
-                  <li>August saw a <strong>23-day dry spell</strong> during critical kharif pod development.</li>
-                  <li>3-Month Standardized Precipitation Index (SPI-3): <strong>-1.42</strong> (<em>Moderately Dry</em>).</li>
-                  <li>Cumulative monsoon line diverged from normal climatology beginning week 28.</li>
+                  <li><strong>23-day consecutive dry spell</strong> in August during critical kharif crop flowering.</li>
+                  <li><strong>Standardized Precipitation Index (SPI-3):</strong> -1.42 (<em>Moderately Dry</em>).</li>
+                  <li>Monthly departure shows June was normal (+12%), but July (-38%) and August (-44%) experienced severe monsoon failure.</li>
                 </ul>
               </div>
             </div>
           )}
 
-          {/* Step 4: Machine Learning Forecast */}
+          {/* Step 4: Review Groundwater Stress */}
           {currentStep === 4 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
-                <Layers className="w-3.5 h-3.5 text-[#234F46]" />
-                <span>Step 4 of {totalSteps}: Statistical SPI & Machine Learning Forecasting</span>
+                <Waves className="w-3.5 h-3.5 text-[#4A8B82]" />
+                <span>Step 4 of {totalSteps}: Review Groundwater Stress & Extraction</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                Strict Chronological Split · Zero Data Leakage
+                Aquifer Depletion & Critical Talukas
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                JalDrishti AI uses real statistical hydrology and machine learning:
+                Parbhani’s basalt aquifer exhibits high extraction pressure and limited storativity. The water table fluctuates significantly between post-monsoon and summer:
               </p>
 
               <div className="p-4 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0] space-y-2 text-xs">
                 <div className="grid grid-cols-2 gap-3 font-mono text-[11px]">
-                  <div className="p-2 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0]">
-                    <span className="text-[#68736E] block text-[10px]">1-Month Outlook (SPI-3)</span>
-                    <strong className="text-[#C7813C] text-sm">-1.38 ± 0.35</strong>
-                    <span className="text-[#68736E] block text-[9px]">HistGradientBoostingRegressor</span>
+                  <div className="p-2.5 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0]">
+                    <span className="text-[#68736E] block text-[10px]">Pre-Monsoon Depth</span>
+                    <strong className="text-[#A66628] text-sm">11.4 m bgl</strong>
+                    <span className="text-[#8B9691] block text-[9px]">May observation well depth</span>
                   </div>
-                  <div className="p-2 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0]">
-                    <span className="text-[#68736E] block text-[10px]">3-Month Outlook (SPI-3)</span>
-                    <strong className="text-[#DE9954] text-sm">-1.12 ± 0.42</strong>
-                    <span className="text-[#68736E] block text-[9px]">Ridge Linear Baseline</span>
+                  <div className="p-2.5 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0]">
+                    <span className="text-[#68736E] block text-[10px]">Post-Monsoon Depth</span>
+                    <strong className="text-[#4A8B82] text-sm">7.8 m bgl</strong>
+                    <span className="text-[#8B9691] block text-[9px]">Limited recharge rise</span>
                   </div>
                 </div>
                 <div className="text-[11px] text-[#68736E] pt-1">
-                  Validated on 2019–2024 test partition without data leakage. +18.6% error reduction over historical persistence.
+                  <strong>3 out of 9 talukas</strong> (Jintur, Pathri, Sailu) show critical stage of groundwater development exceeding 85% extraction.
                 </div>
               </div>
             </div>
           )}
 
-          {/* Step 5: Multi-Criteria Sensitivity */}
+          {/* Step 5: Show Drought-Risk Analysis & MCDA */}
           {currentStep === 5 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
-                <Compass className="w-3.5 h-3.5 text-[#234F46]" />
-                <span>Step 5 of {totalSteps}: Transparent MCDA Sensitivity Analysis</span>
+                <Sliders className="w-3.5 h-3.5 text-[#234F46]" />
+                <span>Step 5 of {totalSteps}: Show Drought-Risk Analysis & Sensitivity</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                Deterministic Formula with Interactive Policy Weights
+                Transparent Multi-Criteria Decision Analysis (MCDA)
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                Composite Risk Score is not a black-box model. It uses Multi-Criteria Decision Analysis:
+                The Composite Drought Risk Index (CRI) is completely explainable with normalized mathematical weights:
               </p>
-              <div className="p-3 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0] font-mono text-xs text-[#25332F]">
-                Risk = (0.45 × Rainfall Deficit) + (0.35 × Groundwater Stress) + (0.20 × Reservoir Depletion)
+              <div className="p-3 rounded-lg bg-[#FFFEFA] border border-[#E3DDD0] font-mono text-xs text-[#234F46] font-bold">
+                CRI = (0.45 × Rainfall Deficit) + (0.35 × Groundwater Stress) + (0.20 × Reservoir Depletion)
               </div>
-              <p className="text-xs text-[#68736E]">
-                Evaluators and policy makers can interactively test different weight configurations in the <em>District Comparison & Risk Analysis</em> module to simulate drought scenarios under varying policy priorities.
-              </p>
+              <div className="p-3.5 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0] text-xs space-y-1 font-mono">
+                <div className="text-[#25332F]">
+                  Parbhani: (0.45 × 50.3) + (0.35 × 68.0) + (0.20 × 67.0) = <strong className="text-[#A66628]">59.9 / 100 (High Risk)</strong>
+                </div>
+                <div className="text-[11px] text-[#68736E]">
+                  Evaluators can interactively adjust weights using the sliders to test different policy contingencies in real time.
+                </div>
+              </div>
             </div>
           )}
 
-          {/* Step 6: Actionable Contingency & Reports */}
+          {/* Step 6: Display Water-Conservation Recommendations */}
           {currentStep === 6 && (
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
-                <FileText className="w-3.5 h-3.5 text-[#234F46]" />
-                <span>Step 6 of {totalSteps}: Actionable Contingency & Dossier Export</span>
+                <AlertTriangle className="w-3.5 h-3.5 text-[#C7813C]" />
+                <span>Step 6 of {totalSteps}: Water-Conservation Recommendations</span>
               </div>
               <h4 className="text-lg font-bold text-[#25332F]">
-                Decision Support & One-Click CSV Export
+                Targeted Inter-Departmental Guidance for Parbhani
               </h4>
               <p className="text-xs text-[#68736E] leading-relaxed">
-                JalDrishti AI translates indicators into domain-specific recommendations for district collectors and water officers:
+                Actionable recommendations mapped to specific district departments:
               </p>
 
               <div className="space-y-2 text-xs">
-                <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-start gap-2">
-                  <span className="px-1.5 py-0.5 rounded bg-[#F4F7EF] text-[#5A6E41] border border-[#8FA86E]/40 text-[10px] font-bold">Agriculture</span>
-                  <span className="text-[#25332F] text-[11px]">Enforce micro-irrigation scheduling in Pathri & Jintur blocks for rabi pulses.</span>
+                <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-start gap-2.5">
+                  <span className="px-1.5 py-0.5 rounded bg-[#F4F7EF] text-[#5A6E41] border border-[#8FA86E]/40 text-[10px] font-bold shrink-0">
+                    Agriculture
+                  </span>
+                  <div className="text-[11px] text-[#25332F]">
+                    <strong>Rabi Micro-Irrigation Scheduling:</strong> Mandate alternate-furrow or drip irrigation in Jintur and Pathri talukas to save 35% irrigation quota.
+                  </div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-start gap-2">
-                  <span className="px-1.5 py-0.5 rounded bg-[#EDF6FA] text-[#1C627C] border border-[#4EA3C3]/40 text-[10px] font-bold">Drinking Water</span>
-                  <span className="text-[#25332F] text-[11px]">Reserve Yeldari dam live capacity strictly for rural piped water schemes.</span>
+                <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-start gap-2.5">
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF6FA] text-[#1C627C] border border-[#4EA3C3]/40 text-[10px] font-bold shrink-0">
+                    Drinking Water
+                  </span>
+                  <div className="text-[11px] text-[#25332F]">
+                    <strong>Lower Dudhna Live Quota Ring-Fencing:</strong> Reserve 100% of live storage for urban and rural drinking water schemes until next monsoon onset.
+                  </div>
+                </div>
+                <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-start gap-2.5">
+                  <span className="px-1.5 py-0.5 rounded bg-[#FBF5EE] text-[#A66628] border border-[#DE9954]/40 text-[10px] font-bold shrink-0">
+                    GSDA Ground
+                  </span>
+                  <div className="text-[11px] text-[#25332F]">
+                    <strong>Deep Borewell Moratorium:</strong> Enforce drilling restrictions under Maharashtra Groundwater Act 2009 in vulnerable watershed zones.
+                  </div>
                 </div>
               </div>
+            </div>
+          )}
 
-              <div className="pt-2 flex items-center gap-3">
-                <button
-                  onClick={() => {
-                    const url = getCsvDownloadUrl('parbhani');
-                    window.open(url, '_blank');
-                  }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#234F46] hover:bg-[#1E433B] text-[#FFFEFA] font-bold text-xs shadow-xs transition-colors"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Download Parbhani CSV Dossier</span>
-                </button>
+          {/* Step 7: Generate a District Report */}
+          {currentStep === 7 && (
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#234F46] uppercase tracking-wide">
+                <FileText className="w-3.5 h-3.5 text-[#234F46]" />
+                <span>Step 7 of {totalSteps}: Generate District Dossier & Export</span>
+              </div>
+              <h4 className="text-lg font-bold text-[#25332F]">
+                Decision Support Dossier & Real-Time CSV Export
+              </h4>
+              <p className="text-xs text-[#68736E] leading-relaxed">
+                JalDrishti AI provides one-click exportable dossiers for district collectors, planning committees, and state disaster authorities:
+              </p>
+
+              <div className="p-4 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0] space-y-3 text-xs">
+                <div className="text-[#25332F] font-semibold">Parbhani Hydro-Intelligence Summary Dossier:</div>
+                <div className="grid grid-cols-2 gap-2 text-[11px] font-mono">
+                  <div>• Monitored Talukas: 9</div>
+                  <div>• Total Area: 6,511 sq km</div>
+                  <div>• Population: 18.36 Lakhs</div>
+                  <div>• Primary Dam: Lower Dudhna (33.0%)</div>
+                </div>
+
+                <div className="pt-2 flex flex-wrap items-center gap-2.5 border-t border-[#E3DDD0]">
+                  <button
+                    onClick={() => {
+                      const url = getCsvDownloadUrl('parbhani');
+                      window.open(url, '_blank');
+                    }}
+                    className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#234F46] hover:bg-[#1E433B] text-[#FFFEFA] font-bold text-xs shadow-xs transition-colors"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download Parbhani CSV</span>
+                  </button>
+
+                  <button
+                    onClick={() => window.print()}
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#FFFEFA] hover:bg-[#F5F2E9] text-[#25332F] border border-[#D1C9BA] font-semibold text-xs transition-colors"
+                  >
+                    <Printer className="w-3.5 h-3.5 text-[#68736E]" />
+                    <span>Print Dossier</span>
+                  </button>
+                </div>
               </div>
             </div>
           )}
