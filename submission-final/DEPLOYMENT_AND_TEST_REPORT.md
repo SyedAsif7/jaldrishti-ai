@@ -106,7 +106,7 @@ All endpoints return HTTP 200 with valid, complete JSON structures:
 5. Click **Deploy web service**.
 6. Note your live backend URL (e.g., `https://jaldrishti-backend.onrender.com`).
 
-*(Note: A `requirements.txt` is also maintained at the repository root, ensuring builds succeed even if Root Directory is left blank).*
+*(Note: A `requirements.txt`, root `main.py`, and root `app/` package bridge are maintained at the repository root, ensuring builds and starts succeed even if Root Directory is left blank or Start Command is set to default `uvicorn app.main:app`).*
 
 ### 3.2 Frontend Deployment on Vercel (Static Web App)
 1. Log in to [vercel.com](https://vercel.com) and click **"Add New..."** $\rightarrow$ **"Project"**.
