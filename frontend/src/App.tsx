@@ -77,7 +77,7 @@ export const App: React.FC = () => {
   const activeFocusDistrict = selectedDistrict || districts[0] || fallbackDistricts[0];
 
   return (
-    <div className="flex min-h-screen bg-navy-950 text-slate-100 font-sans selection:bg-teal-500/30 selection:text-teal-200">
+    <div className="flex min-h-screen bg-[#F5F2E9] text-[#25332F] font-sans selection:bg-[#234F46]/20 selection:text-[#234F46]">
       {/* Sidebar Navigation */}
       <Sidebar
         currentPage={currentPage}
@@ -201,12 +201,12 @@ export const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <footer className="py-4 px-6 border-t border-navy-800/80 bg-navy-950 text-center text-xs text-slate-500">
+        <footer className="py-4 px-6 border-t border-[#E3DDD0] bg-[#FFFEFA] text-center text-xs text-[#68736E]">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 max-w-7xl mx-auto">
             <span>
               JalDrishti AI · Individual Innovation Project for Seva First Innovation Challenge 2026, Government of Maharashtra
             </span>
-            <span className="font-mono text-[11px] text-amber-500/80">
+            <span className="font-mono text-[11px] text-[#A66628] font-medium">
               ● DEMONSTRATION SIMULATION DATA · NOT LIVE / OFFICIAL
             </span>
           </div>

@@ -5,63 +5,66 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
-  background-color: #060d17;
-  color: #f8fafc;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F5F2E9;
+  color: #25332F;
+  font-family: 'Inter', 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom dark scrollbar */
+/* Authentic Environmental Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a1626;
+  background: #ECE6D8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e3852;
+  background: #B8B0A2;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2c537d;
+  background: #8F8678;
 }
 
-/* Leaflet dark theme map enhancements */
+/* Leaflet GIS Map Styling - Environmental & Geographic */
 .leaflet-container {
-  background-color: #0a1626 !important;
+  background-color: #E8E2D5 !important;
   font-family: inherit;
 }
 
 .leaflet-popup-content-wrapper {
-  background: #0e1f33 !important;
-  color: #f8fafc !important;
-  border: 1px solid #1f3e5f !important;
-  border-radius: 12px !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+  background: #FFFEFA !important;
+  color: #25332F !important;
+  border: 1px solid #D1C9BA !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 25px -5px rgba(37, 51, 47, 0.18) !important;
+  padding: 2px !important;
 }
 
 .leaflet-popup-tip {
-  background: #0e1f33 !important;
+  background: #FFFEFA !important;
 }
 
 .leaflet-control-zoom a {
-  background-color: #0e1f33 !important;
-  color: #38bdf8 !important;
-  border: 1px solid #1f3e5f !important;
+  background-color: #FFFEFA !important;
+  color: #234F46 !important;
+  border: 1px solid #D1C9BA !important;
+  font-weight: 700 !important;
 }
 
 .leaflet-control-zoom a:hover {
-  background-color: #19334f !important;
+  background-color: #F7F4EB !important;
+  color: #17362F !important;
 }
 
-/* Custom District Cartographic Labels */
+/* Cartographic District Labels on GIS Map */
 .district-carto-label {
   background: transparent !important;
   border: none !important;
@@ -81,12 +84,12 @@ body {
 }
 
 .district-label-name {
-  color: #ffffff;
+  color: #19221F;
   font-weight: 800;
   font-size: 11px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 4px #ffffff, 0 0 6px #ffffff, 0 1px 3px #ffffff, 0 0 8px #ffffff;
   white-space: nowrap;
 }
 
@@ -94,16 +97,16 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-weight: 700;
   font-size: 10px;
-  background: rgba(10, 22, 38, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 254, 250, 0.94);
+  border: 1px solid rgba(209, 201, 186, 0.9);
   border-radius: 9999px;
-  padding: 1px 6px;
+  padding: 1px 7px;
   margin-top: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(37, 51, 47, 0.12);
   white-space: nowrap;
 }
 
-/* Custom Pin Beacon for Selected District */
+/* Selected District Cartographic Pin Beacon */
 .selected-district-beacon {
   position: relative;
   width: 24px;
@@ -118,9 +121,9 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #38bdf8;
-  opacity: 0.75;
-  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background: #234F46;
+  opacity: 0.55;
+  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .selected-district-beacon .beacon-dot {
@@ -130,12 +133,12 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #0284c7;
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 10px #38bdf8;
+  background: #234F46;
+  border: 2px solid #FFFEFA;
+  box-shadow: 0 2px 6px rgba(35, 79, 70, 0.5);
 }
 
-/* Print optimizations */
+/* Print optimizations for Official Dossiers */
 @media print {
   body {
     background-color: #ffffff !important;
@@ -153,7 +156,7 @@ body {
     color: #000 !important;
     box-shadow: none !important;
   }
-  .text-white, .text-slate-200, .text-slate-300 {
+  .text-charcoal, .text-slateGov {
     color: #111 !important;
   }
 }

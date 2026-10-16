@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Info } from 'lucide-react';
+import { AlertCircle, Info } from 'lucide-react';
 import { Language } from '../../types';
 import { useTranslation } from '../../i18n/translations';
 
@@ -13,38 +13,40 @@ export const DemoDisclaimer: React.FC<DemoDisclaimerProps> = ({ language, compac
 
   if (compact) {
     return (
-      <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-medium">
-        <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+      <div className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#FBF5EE] border border-[#DE9954]/50 text-[#A66628] text-xs font-medium shadow-xs">
+        <AlertCircle className="w-3.5 h-3.5 text-[#C7813C] shrink-0" />
         <span>{t.demoTag}</span>
       </div>
     );
   }
 
   return (
-    <div className="rounded-xl bg-navy-900/90 border border-amber-500/30 p-4 shadow-lg backdrop-blur mb-6">
+    <div className="rounded-xl bg-[#FFFEFA] border border-[#DE9954]/40 p-4 shadow-sm mb-6">
       <div className="flex items-start gap-3">
-        <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 shrink-0 mt-0.5">
-          <Info className="w-5 h-5" />
+        <div className="p-2 rounded-lg bg-[#FBF5EE] text-[#C7813C] shrink-0 mt-0.5 border border-[#DE9954]/30">
+          <Info className="w-4 h-4" />
         </div>
         <div className="space-y-1">
           <div className="flex items-center gap-2 flex-wrap">
-            <h4 className="text-sm font-bold text-amber-300 tracking-wide uppercase">
+            <h4 className="text-xs font-bold text-[#A66628] tracking-wider uppercase">
               {t.common.disclaimerHeading}
             </h4>
-            <span className="px-2 py-0.5 text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full">
+            <span className="px-2 py-0.5 text-[10px] font-semibold bg-[#FBF5EE] text-[#A66628] border border-[#DE9954]/40 rounded-full">
               {t.challengeTag}
             </span>
           </div>
-          <p className="text-xs text-slate-300 leading-relaxed">
+          <p className="text-xs text-[#25332F] leading-relaxed">
             {t.common.disclaimerBody}
           </p>
-          <div className="pt-1 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-400 font-mono">
-            <span>• Method: Multi-Criteria Composite Index (Not Trained ML Model)</span>
+          <div className="pt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-[#68736E] font-mono border-t border-[#F0EBE1] mt-2">
+            <span>• Assessment: Multi-Criteria Decision Analysis (MCDA Composite Index)</span>
             <span>• Data Mode: Seed Simulation (No Live Telemetry API Claimed)</span>
-            <span>• Status: Pre-Deployment Research Prototype</span>
+            <span>• Target Geography: 8 Marathwada Districts, Maharashtra</span>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default DemoDisclaimer;

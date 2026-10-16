@@ -7,8 +7,9 @@ import {
   MapPin,
   AlertCircle,
   Menu,
-  Award,
-  Sparkles
+  Compass,
+  Calendar,
+  Layers
 } from 'lucide-react';
 import { District, Language } from '../../types';
 import { useTranslation } from '../../i18n/translations';
@@ -49,71 +50,83 @@ export const TopNav: React.FC<TopNavProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-30 bg-navy-900/95 backdrop-blur border-b border-navy-700/80 px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
-      {/* Left side: Mobile Menu Toggle + District Selector */}
-      <div className="flex items-center gap-2.5">
+    <header className="sticky top-0 z-30 bg-[#FFFEFA] border-b border-[#E3DDD0] px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 shadow-xs">
+      {/* Left side: Mobile Menu Toggle + District Selector + Region Label */}
+      <div className="flex items-center gap-2.5 flex-wrap">
         {/* Mobile Hamburger Menu Toggle */}
         <button
           onClick={onToggleMobileMenu}
-          className="md:hidden p-2 rounded-lg bg-navy-800 border border-navy-700 text-slate-300 hover:text-white"
+          className="md:hidden p-2 rounded-lg bg-[#F5F2E9] border border-[#D1C9BA] text-[#25332F] hover:bg-[#ECE6D8]"
           title="Open Menu"
         >
           <Menu className="w-4 h-4" />
         </button>
 
+        {/* Region context pill */}
+        <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#F5F2E9] border border-[#E3DDD0] text-[11px] text-[#68736E] font-medium">
+          <Compass className="w-3.5 h-3.5 text-[#234F46]" />
+          <span>Marathwada Division · Godavari Basin</span>
+        </div>
+
         {/* District Dropdown Selector */}
-        <div className="flex items-center gap-2 bg-navy-800 border border-navy-700 px-3 py-1.5 rounded-lg shadow-sm">
-          <MapPin className="w-4 h-4 text-teal-400 shrink-0" />
-          <span className="text-xs text-slate-400 font-medium hidden sm:inline">
+        <div className="flex items-center gap-2 bg-[#F5F2E9] border border-[#D1C9BA] px-3 py-1.5 rounded-lg shadow-2xs">
+          <MapPin className="w-4 h-4 text-[#234F46] shrink-0" />
+          <span className="text-xs text-[#68736E] font-semibold hidden sm:inline">
             {t.selectDistrict}:
           </span>
           <select
             value={selectedDistrictId}
             onChange={(e) => onSelectDistrict(e.target.value)}
-            className="bg-transparent text-white font-semibold text-xs focus:outline-none cursor-pointer pr-1"
+            className="bg-transparent text-[#25332F] font-bold text-xs focus:outline-none cursor-pointer pr-1"
           >
-            <option value="all" className="bg-navy-900 text-slate-200">
+            <option value="all" className="bg-[#FFFEFA] text-[#25332F]">
               {t.allDistricts} (Overview)
             </option>
             {districts.map((d) => (
-              <option key={d.id} value={d.id} className="bg-navy-900 text-slate-200">
+              <option key={d.id} value={d.id} className="bg-[#FFFEFA] text-[#25332F]">
                 {language === 'mr' ? d.name_mr : d.name}
               </option>
             ))}
           </select>
         </div>
 
-        {/* Competition Demo Walkthrough Button */}
+        {/* Data Reporting Cycle Badge */}
+        <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#F4F7EF] border border-[#8FA86E]/40 text-[#5A6E41] text-[11px] font-semibold">
+          <Calendar className="w-3.5 h-3.5 text-[#728A53] shrink-0" />
+          <span>Water Year 2024–25 (Monsoon Cycle)</span>
+        </div>
+
+        {/* Guided Walkthrough Tour Button */}
         {onOpenDemoTour && (
           <button
             onClick={onOpenDemoTour}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-500 hover:from-teal-500 hover:to-cyan-400 text-white font-bold text-xs shadow-md shadow-teal-900/50 transition-all transform hover:scale-[1.02]"
-            title="Launch Competition Guided Walkthrough (Parbhani Case Study)"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#234F46] hover:bg-[#1E433B] text-[#FFFEFA] font-semibold text-xs shadow-xs transition-colors"
+            title="Launch Guided Evaluation Tour (Parbhani Case Study)"
           >
-            <Award className="w-3.5 h-3.5" />
+            <Layers className="w-3.5 h-3.5 text-[#8FA86E]" />
             <span className="hidden sm:inline">
-              {language === 'mr' ? 'मार्गदर्शित प्रात्यक्षिक (परभणी)' : 'Guided Demo (Parbhani)'}
+              {language === 'mr' ? 'मार्गदर्शित प्रात्यक्षिक (परभणी)' : 'Guided Walkthrough (Parbhani)'}
             </span>
-            <span className="sm:hidden">Demo</span>
+            <span className="sm:hidden">Tour</span>
           </button>
         )}
-
-        {/* Prominent Demo Flag */}
-        <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[11px] font-semibold">
-          <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-          <span>{t.demoNoticeShort}</span>
-        </div>
       </div>
 
       {/* Right side: Language, Actions, Refresh */}
       <div className="flex items-center gap-2">
+        {/* Prominent Demo Flag */}
+        <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#FBF5EE] border border-[#DE9954]/40 text-[#A66628] text-[11px] font-medium">
+          <AlertCircle className="w-3.5 h-3.5 text-[#C7813C] shrink-0" />
+          <span>{t.demoNoticeShort}</span>
+        </div>
+
         {/* Language Toggle */}
         <button
           onClick={onToggleLanguage}
-          className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-navy-800 border border-navy-700 text-xs font-semibold text-slate-200 hover:border-teal-500/50 hover:text-teal-300 transition-colors"
+          className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F5F2E9] border border-[#D1C9BA] text-xs font-semibold text-[#25332F] hover:bg-[#ECE6D8] transition-colors"
           title="Switch Language / भाषा बदला"
         >
-          <Languages className="w-3.5 h-3.5 text-teal-400" />
+          <Languages className="w-3.5 h-3.5 text-[#234F46]" />
           <span className="hidden xs:inline">{language === 'en' ? 'मराठी' : 'English'}</span>
         </button>
 
@@ -121,16 +134,16 @@ export const TopNav: React.FC<TopNavProps> = ({
         <button
           onClick={onRefresh}
           disabled={isRefreshing}
-          className="p-2 rounded-lg bg-navy-800 border border-navy-700 text-slate-300 hover:text-teal-300 hover:border-teal-500/50 transition-colors disabled:opacity-50"
+          className="p-2 rounded-lg bg-[#F5F2E9] border border-[#D1C9BA] text-[#25332F] hover:bg-[#ECE6D8] transition-colors disabled:opacity-50"
           title={t.refresh}
         >
-          <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-teal-400' : ''}`} />
+          <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-[#234F46]' : ''}`} />
         </button>
 
         {/* Export CSV button */}
         <button
           onClick={handleExportCsv}
-          className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-600/20 border border-teal-500/40 text-teal-300 hover:bg-teal-600/30 text-xs font-semibold transition-colors"
+          className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EDF6FA] border border-[#4EA3C3]/50 text-[#1C627C] hover:bg-[#D9EEF7] text-xs font-semibold transition-colors"
           title="Download District Indicators CSV"
         >
           <Download className="w-3.5 h-3.5" />
@@ -140,14 +153,15 @@ export const TopNav: React.FC<TopNavProps> = ({
         {/* Print button */}
         <button
           onClick={handlePrint}
-          className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-800 border border-navy-700 text-slate-300 hover:border-navy-600 text-xs font-medium transition-colors"
+          className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F5F2E9] border border-[#D1C9BA] text-[#68736E] hover:text-[#25332F] hover:bg-[#ECE6D8] text-xs font-medium transition-colors"
           title="Print Executive Dossier"
         >
-          <Printer className="w-3.5 h-3.5 text-slate-400" />
+          <Printer className="w-3.5 h-3.5" />
           <span>Print</span>
         </button>
       </div>
     </header>
   );
 };
+
 export default TopNav;

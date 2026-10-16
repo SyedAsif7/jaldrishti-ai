@@ -69,20 +69,20 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
   const preDepPct = preNormal > 0 ? ((preActual - preNormal) / preNormal) * 100 : 0;
 
   const getImdClassification = (depPct: number) => {
-    if (depPct >= 60) return { label: 'Large Excess (≥+60%)', color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/30' };
-    if (depPct >= 20) return { label: 'Excess (+20% to +59%)', color: 'text-blue-400 bg-blue-500/10 border-blue-500/30' };
-    if (depPct >= -19) return { label: 'Normal (-19% to +19%)', color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30' };
-    if (depPct >= -59) return { label: 'Deficient (-20% to -59%)', color: 'text-amber-400 bg-amber-500/10 border-amber-500/30' };
-    return { label: 'Large Deficient (≤-60%)', color: 'text-red-400 bg-red-500/10 border-red-500/30' };
+    if (depPct >= 60) return { label: 'Large Excess (≥+60%)', color: 'text-[#1C627C] bg-[#EDF6FA] border-[#4EA3C3]/50' };
+    if (depPct >= 20) return { label: 'Excess (+20% to +59%)', color: 'text-[#267D9D] bg-[#EDF6FA] border-[#267D9D]/40' };
+    if (depPct >= -19) return { label: 'Normal (-19% to +19%)', color: 'text-[#5A6E41] bg-[#F4F7EF] border-[#8FA86E]/40' };
+    if (depPct >= -59) return { label: 'Deficient (-20% to -59%)', color: 'text-[#A66628] bg-[#FBF5EE] border-[#DE9954]/50' };
+    return { label: 'Large Deficient (≤-60%)', color: 'text-[#B64D3C] bg-[#FAF0EE] border-[#B64D3C]/40' };
   };
 
   const swImd = getImdClassification(swDepPct);
 
   const getSpiClassification = (spi: number) => {
-    if (spi <= -2.0) return { label: 'Extremely Dry', color: 'text-red-400 bg-red-500/10 border-red-500/30' };
-    if (spi <= -1.5) return { label: 'Severely Dry', color: 'text-orange-400 bg-orange-500/10 border-orange-500/30' };
-    if (spi <= -1.0) return { label: 'Moderately Dry', color: 'text-amber-400 bg-amber-500/10 border-amber-500/30' };
-    return { label: 'Near Normal', color: 'text-teal-400 bg-teal-500/10 border-teal-500/30' };
+    if (spi <= -2.0) return { label: 'Extremely Dry', color: 'text-[#B64D3C] bg-[#FAF0EE] border-[#B64D3C]/40' };
+    if (spi <= -1.5) return { label: 'Severely Dry', color: 'text-[#CE6755] bg-[#FAF0EE] border-[#CE6755]/40' };
+    if (spi <= -1.0) return { label: 'Moderately Dry', color: 'text-[#A66628] bg-[#FBF5EE] border-[#DE9954]/50' };
+    return { label: 'Near Normal', color: 'text-[#5A6E41] bg-[#F4F7EF] border-[#8FA86E]/40' };
   };
 
   const spiInfo = getSpiClassification(selectedDistrict.rainfall.spi_3month_estimate);
@@ -95,12 +95,12 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <CloudRain className="w-6 h-6 text-teal-400" />
-            <h1 className="text-2xl font-extrabold text-white tracking-tight">
+            <CloudRain className="w-6 h-6 text-[#267D9D]" />
+            <h1 className="text-2xl font-extrabold text-[#25332F] tracking-tight">
               {t.nav.rainfall}
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-[#68736E] mt-1">
             {language === 'mr'
               ? '५० वर्षांची IMD सरासरी विरुद्ध नोंदवलेले पर्जन्यमान, तूट टक्केवारी व SPI निर्देशांक.'
               : 'Precipitation departure tracking against 50-year IMD Long Period Average (LPA) with seasonal breakdown.'}
@@ -115,8 +115,8 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
               onClick={() => onSelectDistrict(d.id)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
                 selectedDistrict.id === d.id
-                  ? 'bg-teal-500 text-navy-950 font-bold shadow-md'
-                  : 'bg-navy-800 text-slate-300 hover:bg-navy-750'
+                  ? 'bg-[#234F46] text-[#FFFEFA] font-bold shadow-xs'
+                  : 'bg-[#FFFEFA] border border-[#D1C9BA] text-[#68736E] hover:text-[#25332F] hover:bg-[#F5F2E9]'
               }`}
             >
               {language === 'mr' ? d.name_mr : d.name}
@@ -127,23 +127,23 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
 
       {/* Top Indicators Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-xl bg-navy-900 border border-navy-700/80 shadow-md">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+        <div className="p-5 rounded-xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+          <span className="text-[11px] font-bold text-[#68736E] uppercase tracking-wider block mb-1">
             Monsoon Rainfall Deficit
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold font-mono text-amber-300">
+            <span className="text-3xl font-extrabold font-mono text-[#A66628]">
               -{selectedDistrict.rainfall.deficit_percentage}%
             </span>
-            <span className="text-xs font-medium text-slate-400">vs Normal</span>
+            <span className="text-xs font-medium text-[#68736E]">vs Normal</span>
           </div>
-          <div className="mt-2 text-xs text-slate-400">
-            Observed: <strong className="text-white">{selectedDistrict.rainfall.monsoon_actual_mm} mm</strong> / Normal: {selectedDistrict.rainfall.monsoon_normal_mm} mm
+          <div className="mt-2 text-xs text-[#68736E]">
+            Observed: <strong className="text-[#25332F]">{selectedDistrict.rainfall.monsoon_actual_mm} mm</strong> / Normal: {selectedDistrict.rainfall.monsoon_normal_mm} mm
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-navy-900 border border-navy-700/80 shadow-md">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+        <div className="p-5 rounded-xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+          <span className="text-[11px] font-bold text-[#68736E] uppercase tracking-wider block mb-1">
             IMD Monsoon Category
           </span>
           <div className="mt-1">
@@ -151,106 +151,106 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
               {swImd.label}
             </span>
           </div>
-          <div className="mt-2 text-xs text-slate-400">
-            Departure: <strong className="text-white">{swDepPct.toFixed(1)}%</strong> from LPA
+          <div className="mt-2 text-xs text-[#68736E]">
+            Departure: <strong className="text-[#25332F]">{swDepPct.toFixed(1)}%</strong> from LPA
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-navy-900 border border-navy-700/80 shadow-md">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+        <div className="p-5 rounded-xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+          <span className="text-[11px] font-bold text-[#68736E] uppercase tracking-wider block mb-1">
             SPI-3 Estimate (3-Month)
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold font-mono text-white">
+            <span className="text-3xl font-extrabold font-mono text-[#25332F]">
               {selectedDistrict.rainfall.spi_3month_estimate.toFixed(2)}
             </span>
             <span className={`px-2 py-0.5 rounded text-[11px] font-bold border ${spiInfo.color}`}>
               {spiInfo.label}
             </span>
           </div>
-          <div className="mt-2 text-xs text-slate-400">
-            Standardized Precipitation Index (McKee et al.)
+          <div className="mt-2 text-xs text-[#68736E]">
+            Standardized Precipitation Index (WMO-No. 1090)
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-navy-900 border border-navy-700/80 shadow-md">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+        <div className="p-5 rounded-xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+          <span className="text-[11px] font-bold text-[#68736E] uppercase tracking-wider block mb-1">
             Max Consecutive Dry Spell
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold font-mono text-orange-400">
+            <span className="text-3xl font-extrabold font-mono text-[#B64D3C]">
               {selectedDistrict.rainfall.dry_spell_days_max}
             </span>
-            <span className="text-xs font-medium text-slate-400">days</span>
+            <span className="text-xs font-medium text-[#68736E]">days</span>
           </div>
-          <div className="mt-2 text-xs text-slate-400">
+          <div className="mt-2 text-xs text-[#68736E]">
             {selectedDistrict.rainfall.dry_spell_days_max > 21 ? 'Exceeds 21-day critical stress threshold' : 'Normal dry-spell window'}
           </div>
         </div>
       </div>
 
       {/* Seasonal Rainfall Trends Summary Box */}
-      <div className="p-5 rounded-2xl bg-navy-900 border border-navy-700/80 shadow-lg">
-        <h2 className="text-sm font-bold text-white tracking-wide uppercase mb-3 flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-teal-400" />
+      <div className="p-5 rounded-2xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+        <h2 className="text-xs font-bold text-[#25332F] tracking-wider uppercase mb-3 flex items-center gap-2">
+          <Calendar className="w-4 h-4 text-[#234F46]" />
           <span>Seasonal Rainfall Breakdown (Historical Normal vs Observed)</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-          <div className="p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-            <div className="font-bold text-white mb-1 flex items-center justify-between">
+          <div className="p-3.5 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0]">
+            <div className="font-bold text-[#25332F] mb-1 flex items-center justify-between">
               <span>Southwest Monsoon (Jun–Sep)</span>
-              <span className="text-amber-400 font-mono">{swDepPct.toFixed(1)}%</span>
+              <span className="text-[#A66628] font-mono font-bold">{swDepPct.toFixed(1)}%</span>
             </div>
-            <div className="text-slate-400 space-y-0.5">
-              <div>Observed: <strong className="text-teal-300 font-mono">{swActual.toFixed(1)} mm</strong></div>
-              <div>Normal LPA: <strong className="text-slate-300 font-mono">{swNormal.toFixed(1)} mm</strong></div>
-              <div className="text-[11px] text-slate-500 pt-1">Primary cropping window (Kharif)</div>
+            <div className="text-[#68736E] space-y-0.5">
+              <div>Observed: <strong className="text-[#267D9D] font-mono">{swActual.toFixed(1)} mm</strong></div>
+              <div>Normal LPA: <strong className="text-[#25332F] font-mono">{swNormal.toFixed(1)} mm</strong></div>
+              <div className="text-[11px] text-[#8B9691] pt-1">Primary cropping window (Kharif)</div>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-            <div className="font-bold text-white mb-1 flex items-center justify-between">
+          <div className="p-3.5 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0]">
+            <div className="font-bold text-[#25332F] mb-1 flex items-center justify-between">
               <span>Post-Monsoon (Oct–Dec)</span>
-              <span className="text-amber-400 font-mono">{postDepPct.toFixed(1)}%</span>
+              <span className="text-[#A66628] font-mono font-bold">{postDepPct.toFixed(1)}%</span>
             </div>
-            <div className="text-slate-400 space-y-0.5">
-              <div>Observed: <strong className="text-teal-300 font-mono">{postActual.toFixed(1)} mm</strong></div>
-              <div>Normal LPA: <strong className="text-slate-300 font-mono">{postNormal.toFixed(1)} mm</strong></div>
-              <div className="text-[11px] text-slate-500 pt-1">Rabi soil-moisture recharge window</div>
+            <div className="text-[#68736E] space-y-0.5">
+              <div>Observed: <strong className="text-[#267D9D] font-mono">{postActual.toFixed(1)} mm</strong></div>
+              <div>Normal LPA: <strong className="text-[#25332F] font-mono">{postNormal.toFixed(1)} mm</strong></div>
+              <div className="text-[11px] text-[#8B9691] pt-1">Rabi soil-moisture recharge window</div>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-            <div className="font-bold text-white mb-1 flex items-center justify-between">
+          <div className="p-3.5 rounded-xl bg-[#F5F2E9] border border-[#E3DDD0]">
+            <div className="font-bold text-[#25332F] mb-1 flex items-center justify-between">
               <span>Winter & Summer (Jan–May)</span>
-              <span className="text-amber-400 font-mono">{preDepPct.toFixed(1)}%</span>
+              <span className="text-[#A66628] font-mono font-bold">{preDepPct.toFixed(1)}%</span>
             </div>
-            <div className="text-slate-400 space-y-0.5">
-              <div>Observed: <strong className="text-teal-300 font-mono">{preActual.toFixed(1)} mm</strong></div>
-              <div>Normal LPA: <strong className="text-slate-300 font-mono">{preNormal.toFixed(1)} mm</strong></div>
-              <div className="text-[11px] text-slate-500 pt-1">Thundershowers and pre-sowing showers</div>
+            <div className="text-[#68736E] space-y-0.5">
+              <div>Observed: <strong className="text-[#267D9D] font-mono">{preActual.toFixed(1)} mm</strong></div>
+              <div>Normal LPA: <strong className="text-[#25332F] font-mono">{preNormal.toFixed(1)} mm</strong></div>
+              <div className="text-[11px] text-[#8B9691] pt-1">Thundershowers and pre-sowing showers</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Monthly Actual vs Normal Bar Chart */}
-      <div className="p-6 rounded-2xl bg-navy-900 border border-navy-700/80 shadow-xl">
+      <div className="p-6 rounded-2xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-6">
           <div>
-            <h2 className="text-base font-bold text-white tracking-wide">
+            <h2 className="text-base font-bold text-[#25332F] tracking-wide">
               {selectedDistrict.name} · Monthly Rainfall Departure Analysis (mm)
             </h2>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-[#68736E]">
               Comparison between normal LPA baseline and demo observed monthly rainfall.
             </p>
           </div>
-          <div className="flex items-center gap-3 text-xs">
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <span className="w-3 h-3 bg-sky-500 rounded-sm" /> Normal (LPA)
+          <div className="flex items-center gap-3 text-xs font-semibold">
+            <span className="flex items-center gap-1.5 text-[#68736E]">
+              <span className="w-3 h-3 bg-[#A8B6B0] rounded-xs" /> Normal (LPA)
             </span>
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <span className="w-3 h-3 bg-teal-400 rounded-sm" /> Observed
+            <span className="flex items-center gap-1.5 text-[#267D9D]">
+              <span className="w-3 h-3 bg-[#267D9D] rounded-xs" /> Observed
             </span>
           </div>
         </div>
@@ -258,20 +258,21 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
         <div className="h-[340px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1f3e5f" opacity={0.5} />
-              <XAxis dataKey="month" stroke="#94a3b8" tick={{ fontSize: 11 }} />
-              <YAxis stroke="#94a3b8" tick={{ fontSize: 11 }} unit=" mm" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#E8E2D5" opacity={0.8} />
+              <XAxis dataKey="month" stroke="#8B9691" tick={{ fontSize: 11, fill: '#68736E' }} />
+              <YAxis stroke="#8B9691" tick={{ fontSize: 11, fill: '#68736E' }} unit=" mm" />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#0e1f33',
-                  borderColor: '#1f3e5f',
+                  backgroundColor: '#FFFEFA',
+                  borderColor: '#D1C9BA',
                   borderRadius: '10px',
-                  color: '#f8fafc',
-                  fontSize: '12px'
+                  color: '#25332F',
+                  fontSize: '12px',
+                  boxShadow: '0 4px 12px rgba(37,51,47,0.1)'
                 }}
               />
-              <Bar dataKey="Normal" fill="#38bdf8" radius={[4, 4, 0, 0]} name="Normal LPA (mm)" />
-              <Bar dataKey="Actual" fill="#14b8a6" radius={[4, 4, 0, 0]} name="Observed Rain (mm)" />
+              <Bar dataKey="Normal" fill="#A8B6B0" radius={[3, 3, 0, 0]} name="Normal LPA (mm)" />
+              <Bar dataKey="Actual" fill="#267D9D" radius={[3, 3, 0, 0]} name="Observed Rain (mm)" />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -279,32 +280,33 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
 
       {/* Cumulative Monsoon Progression Chart */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="p-6 rounded-2xl bg-navy-900 border border-navy-700/80 shadow-xl">
-          <h2 className="text-base font-bold text-white tracking-wide mb-1">
+        <div className="p-6 rounded-2xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm">
+          <h2 className="text-base font-bold text-[#25332F] tracking-wide mb-1">
             Cumulative Rainfall Curve (mm)
           </h2>
-          <p className="text-xs text-slate-400 mb-4">
+          <p className="text-xs text-[#68736E] mb-4">
             Cumulative precipitation accumulation showing divergence from normal recharge trajectory.
           </p>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={chartData} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1f3e5f" opacity={0.4} />
-                <XAxis dataKey="month" stroke="#94a3b8" tick={{ fontSize: 11 }} />
-                <YAxis stroke="#94a3b8" tick={{ fontSize: 11 }} unit=" mm" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#E8E2D5" opacity={0.8} />
+                <XAxis dataKey="month" stroke="#8B9691" tick={{ fontSize: 11, fill: '#68736E' }} />
+                <YAxis stroke="#8B9691" tick={{ fontSize: 11, fill: '#68736E' }} unit=" mm" />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#0e1f33',
-                    borderColor: '#1f3e5f',
+                    backgroundColor: '#FFFEFA',
+                    borderColor: '#D1C9BA',
                     borderRadius: '10px',
-                    color: '#f8fafc',
-                    fontSize: '12px'
+                    color: '#25332F',
+                    fontSize: '12px',
+                    boxShadow: '0 4px 12px rgba(37,51,47,0.1)'
                   }}
                 />
                 <Line
                   type="monotone"
                   dataKey="CumNormal"
-                  stroke="#38bdf8"
+                  stroke="#8B9691"
                   strokeWidth={2}
                   dot={{ r: 3 }}
                   name="Normal Cumulative (mm)"
@@ -312,7 +314,7 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
                 <Line
                   type="monotone"
                   dataKey="CumActual"
-                  stroke="#14b8a6"
+                  stroke="#267D9D"
                   strokeWidth={2.5}
                   dot={{ r: 4 }}
                   name="Observed Cumulative (mm)"
@@ -323,37 +325,37 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
         </div>
 
         {/* Drought Threshold Classification Guide */}
-        <div className="p-6 rounded-2xl bg-navy-900 border border-navy-700/80 shadow-xl flex flex-col justify-between">
+        <div className="p-6 rounded-2xl bg-[#FFFEFA] border border-[#E3DDD0] shadow-sm flex flex-col justify-between">
           <div>
-            <h2 className="text-base font-bold text-white tracking-wide mb-1">
+            <h2 className="text-base font-bold text-[#25332F] tracking-wide mb-1">
               Meteorological Classification Framework
             </h2>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-[#68736E] mb-4">
               Standard IMD drought and deficit classification criteria used in this module:
             </p>
 
             <div className="space-y-2.5 text-xs">
-              <div className="p-2.5 rounded-lg bg-navy-950 border border-navy-800 flex items-center justify-between">
-                <span className="font-semibold text-emerald-400">Normal Rainfall</span>
-                <span className="font-mono text-slate-300">-19% to +19% departure</span>
+              <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-center justify-between">
+                <span className="font-semibold text-[#5A6E41]">Normal Rainfall</span>
+                <span className="font-mono text-[#25332F]">-19% to +19% departure</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-navy-950 border border-navy-800 flex items-center justify-between">
-                <span className="font-semibold text-amber-400">Deficient</span>
-                <span className="font-mono text-slate-300">-20% to -59% departure</span>
+              <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-center justify-between">
+                <span className="font-semibold text-[#A66628]">Deficient</span>
+                <span className="font-mono text-[#25332F]">-20% to -59% departure</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-navy-950 border border-navy-800 flex items-center justify-between">
-                <span className="font-semibold text-orange-400">Large Deficient</span>
-                <span className="font-mono text-slate-300">-60% to -99% departure</span>
+              <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-center justify-between">
+                <span className="font-semibold text-[#CE6755]">Large Deficient</span>
+                <span className="font-mono text-[#25332F]">-60% to -99% departure</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-navy-950 border border-navy-800 flex items-center justify-between">
-                <span className="font-semibold text-red-400">Severe Drought Spell</span>
-                <span className="font-mono text-slate-300">&gt;28 continuous dry days</span>
+              <div className="p-2.5 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0] flex items-center justify-between">
+                <span className="font-semibold text-[#B64D3C]">Severe Drought Spell</span>
+                <span className="font-mono text-[#25332F]">&gt;28 continuous dry days</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-navy-800 flex items-center gap-2 text-[11px] text-slate-400">
-            <Info className="w-4 h-4 text-teal-400 shrink-0" />
+          <div className="mt-4 pt-4 border-t border-[#F0EBE1] flex items-center gap-2 text-[11px] text-[#68736E]">
+            <Info className="w-4 h-4 text-[#234F46] shrink-0" />
             <span>
               All rainfall figures represent demonstration seed data modeled after Marathwada historical agro-climatic zones.
             </span>
@@ -363,3 +365,5 @@ export const RainfallIntelligence: React.FC<RainfallIntelligenceProps> = ({
     </div>
   );
 };
+
+export default RainfallIntelligence;

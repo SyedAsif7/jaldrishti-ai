@@ -58,28 +58,28 @@ export const AlertsRecommendations: React.FC<AlertsRecommendationsProps> = ({
   const getDomainIcon = (domain: string) => {
     switch (domain.toLowerCase()) {
       case 'agriculture':
-        return <Wheat className="w-4 h-4 text-emerald-400" />;
+        return <Wheat className="w-4 h-4 text-[#728A53]" />;
       case 'drinking water':
-        return <Droplet className="w-4 h-4 text-cyan-400" />;
+        return <Droplet className="w-4 h-4 text-[#267D9D]" />;
       case 'tanker contingency':
-        return <Truck className="w-4 h-4 text-amber-400" />;
+        return <Truck className="w-4 h-4 text-[#C7813C]" />;
       case 'groundwater':
-        return <Layers className="w-4 h-4 text-orange-400" />;
+        return <Layers className="w-4 h-4 text-[#4A8B82]" />;
       default:
-        return <ShieldAlert className="w-4 h-4 text-red-400" />;
+        return <ShieldAlert className="w-4 h-4 text-[#B64D3C]" />;
     }
   };
 
   const getSeverityStyle = (sev: string) => {
     switch (sev.toLowerCase()) {
       case 'severe':
-        return 'border-red-500/50 bg-red-950/20 text-red-300';
+        return 'border-[#B64D3C]/40 bg-[#FAF0EE] text-[#B64D3C]';
       case 'high':
-        return 'border-orange-500/50 bg-orange-950/20 text-orange-300';
+        return 'border-[#C7813C]/40 bg-[#FBF5EE] text-[#A66628]';
       case 'medium':
-        return 'border-amber-500/50 bg-amber-950/20 text-amber-300';
+        return 'border-[#DE9954]/40 bg-[#FFF9F2] text-[#B87028]';
       default:
-        return 'border-teal-500/50 bg-teal-950/20 text-teal-300';
+        return 'border-[#728A53]/40 bg-[#F4F7EF] text-[#5A6E41]';
     }
   };
 
@@ -88,15 +88,15 @@ export const AlertsRecommendations: React.FC<AlertsRecommendationsProps> = ({
       <DemoDisclaimer language={language} compact />
 
       {/* Advisory Distinction & Transparency Notice */}
-      <div className="p-4 rounded-xl bg-navy-900 border border-teal-500/30 flex items-start gap-3 shadow-md">
-        <div className="p-2 rounded-lg bg-teal-500/10 text-teal-400 shrink-0 mt-0.5">
+      <div className="p-4 rounded-xl bg-[#FFFEFA] border border-[#234F46]/30 flex items-start gap-3 shadow-sm">
+        <div className="p-2 rounded-lg bg-[#F2F7F4] text-[#234F46] shrink-0 mt-0.5 border border-[#234F46]/20">
           <ShieldCheck className="w-5 h-5" />
         </div>
         <div>
-          <h4 className="text-xs font-bold text-teal-300 tracking-wide uppercase">
+          <h4 className="text-xs font-bold text-[#234F46] tracking-wide uppercase">
             Guidance Classification & Legal Demarcation Notice
           </h4>
-          <p className="text-xs text-slate-300 leading-relaxed mt-1">
+          <p className="text-xs text-[#68736E] leading-relaxed mt-1">
             All advisories on this page represent <strong>General Technical Guidance</strong> algorithmically generated from simulated rainfall deficits, groundwater depletion thresholds, and reservoir scarcity indices. They do <strong>NOT</strong> constitute official Government Gazettes, statutory orders under the Disaster Management Act, or sanctioned district administrative notifications.
           </p>
         </div>
@@ -106,12 +106,12 @@ export const AlertsRecommendations: React.FC<AlertsRecommendationsProps> = ({
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-amber-400" />
-            <h1 className="text-2xl font-extrabold text-white tracking-tight">
+            <AlertTriangle className="w-6 h-6 text-[#C7813C]" />
+            <h1 className="text-2xl font-extrabold text-[#25332F] tracking-tight">
               {t.nav.alerts}
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-[#68736E] mt-1">
             {language === 'mr'
               ? 'कृषी, पिण्याचे पाणी, टँकर नियोजन आणि भूजल संरक्षणासाठी जिल्हास्तरीय मार्गदर्शक सूचना.'
               : 'Actionable multi-sectoral advisories filtered by domain and drought risk severity.'}
@@ -121,34 +121,34 @@ export const AlertsRecommendations: React.FC<AlertsRecommendationsProps> = ({
         {/* Filter Bar */}
         <div className="flex items-center gap-3 flex-wrap">
           {/* Domain Filter */}
-          <div className="flex items-center gap-1.5 bg-navy-800 border border-navy-700 px-3 py-1.5 rounded-xl text-xs">
-            <Filter className="w-3.5 h-3.5 text-slate-400" />
+          <div className="flex items-center gap-1.5 bg-[#FFFEFA] border border-[#D1C9BA] px-3 py-1.5 rounded-xl text-xs shadow-xs">
+            <Filter className="w-3.5 h-3.5 text-[#68736E]" />
             <select
               value={selectedDomain}
               onChange={(e) => setSelectedDomain(e.target.value)}
-              className="bg-transparent text-white font-medium focus:outline-none cursor-pointer"
+              className="bg-transparent text-[#25332F] font-bold focus:outline-none cursor-pointer"
             >
-              <option value="all" className="bg-navy-900">All Sectors</option>
-              <option value="Agriculture" className="bg-navy-900">Agriculture</option>
-              <option value="Drinking Water" className="bg-navy-900">Drinking Water</option>
-              <option value="Tanker Contingency" className="bg-navy-900">Tanker Contingency</option>
-              <option value="Groundwater" className="bg-navy-900">Groundwater</option>
-              <option value="Emergency" className="bg-navy-900">Emergency</option>
+              <option value="all">All Sectors</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Drinking Water">Drinking Water</option>
+              <option value="Tanker Contingency">Tanker Contingency</option>
+              <option value="Groundwater">Groundwater</option>
+              <option value="Emergency">Emergency</option>
             </select>
           </div>
 
           {/* Severity Filter */}
-          <div className="flex items-center gap-1.5 bg-navy-800 border border-navy-700 px-3 py-1.5 rounded-xl text-xs">
+          <div className="flex items-center gap-1.5 bg-[#FFFEFA] border border-[#D1C9BA] px-3 py-1.5 rounded-xl text-xs shadow-xs">
             <select
               value={selectedSeverity}
               onChange={(e) => setSelectedSeverity(e.target.value)}
-              className="bg-transparent text-white font-medium focus:outline-none cursor-pointer"
+              className="bg-transparent text-[#25332F] font-bold focus:outline-none cursor-pointer"
             >
-              <option value="all" className="bg-navy-900">All Severities</option>
-              <option value="Severe" className="bg-navy-900">Severe Priority</option>
-              <option value="High" className="bg-navy-900">High Priority</option>
-              <option value="Medium" className="bg-navy-900">Medium Priority</option>
-              <option value="Low" className="bg-navy-900">Low Priority</option>
+              <option value="all">All Severities</option>
+              <option value="Severe">Severe Priority</option>
+              <option value="High">High Priority</option>
+              <option value="Medium">Medium Priority</option>
+              <option value="Low">Low Priority</option>
             </select>
           </div>
         </div>
@@ -161,81 +161,56 @@ export const AlertsRecommendations: React.FC<AlertsRecommendationsProps> = ({
           return (
             <div
               key={idx}
-              className="p-5 rounded-2xl border bg-navy-900/90 shadow-lg backdrop-blur flex flex-col justify-between transition-all hover:border-slate-500"
+              className="p-5 rounded-2xl border border-[#E3DDD0] bg-[#FFFEFA] shadow-sm flex flex-col justify-between transition-all hover:border-[#D1C9BA] hover:shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="p-2 rounded-lg bg-navy-950 border border-navy-800">
+                    <div className="p-2 rounded-lg bg-[#F5F2E9] border border-[#E3DDD0]">
                       {getDomainIcon(item.domain)}
                     </div>
                     <div>
-                      <span className="font-bold text-sm text-white">
+                      <span className="font-bold text-sm text-[#25332F]">
                         {language === 'mr' ? item.districtNameMr : item.districtName}
                       </span>
-                      <span className="text-[10px] text-slate-400 block uppercase tracking-wider">
+                      <span className="text-[10px] text-[#68736E] block uppercase tracking-wider font-semibold">
                         {item.domain}
                       </span>
                     </div>
                   </div>
-
-                  <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold border uppercase tracking-wide ${style}`}>
-                    {item.severity} Priority
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${style}`}
+                  >
+                    {item.severity.toUpperCase()}
                   </span>
                 </div>
 
-                <p className="text-xs text-slate-200 leading-relaxed mt-2 font-normal">
-                  {item.text}
+                <h3 className="font-bold text-sm text-[#25332F] mb-1.5 leading-snug">
+                  {language === 'mr' ? item.action_mr : item.action}
+                </h3>
+                <p className="text-xs text-[#68736E] leading-relaxed mb-4">
+                  {language === 'mr' ? item.rationale_mr : item.rationale}
                 </p>
-
-                <div className="mt-2.5">
-                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono text-slate-400 bg-navy-950 border border-navy-800">
-                    Source: Technical Guidance Model · Not Official Gazette
-                  </span>
-                </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-navy-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                <span>District Status: <strong className="text-white">{item.districtRisk} Risk</strong></span>
+              <div className="pt-3 border-t border-[#F0EBE1] flex items-center justify-between text-[11px] text-[#68736E]">
+                <span className="font-medium">
+                  Lead Agency: <strong className="text-[#25332F]">{item.target_department}</strong>
+                </span>
                 <button
                   onClick={() => onSelectDistrict(item.districtId)}
-                  className="text-teal-400 hover:text-teal-300 font-semibold flex items-center gap-1 transition-colors"
+                  className="text-xs text-[#234F46] hover:text-[#17362F] font-semibold flex items-center gap-1 transition-colors"
                 >
-                  <span>Select District →</span>
+                  <span>Select {item.districtName}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>
           );
         })}
       </div>
-
-      {filteredAdvisories.length === 0 && (
-        <div className="p-12 text-center rounded-2xl bg-navy-900 border border-navy-800 text-slate-400">
-          No advisories match the current filter selection.
-        </div>
-      )}
-
-      {/* Government Contingency Standard Protocols Box */}
-      <div className="p-6 rounded-2xl bg-navy-900 border border-navy-700/80 shadow-xl space-y-3">
-        <h3 className="font-bold text-sm text-white flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-teal-400" />
-          <span>Operational Contingency Checklist for Revenue & Water Administration</span>
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs text-slate-300 pt-2">
-          <div className="p-3 rounded-xl bg-navy-950 border border-navy-800">
-            <strong className="text-teal-400 block mb-1">1. Drinking Water Reservation</strong>
-            Review municipal allocation quotas from major dams; earmark minimum 250 days consumption reserve.
-          </div>
-          <div className="p-3 rounded-xl bg-navy-950 border border-navy-800">
-            <strong className="text-amber-400 block mb-1">2. Tanker Route Optimization</strong>
-            Map telemetry-equipped tankers and GPS-tagged source wells in habitations experiencing water pressure drops.
-          </div>
-          <div className="p-3 rounded-xl bg-navy-950 border border-navy-800">
-            <strong className="text-orange-400 block mb-1">3. Agricultural Advisories</strong>
-            Promote drip and sprinkler subsidy disbursements under PoCRA (Nanaji Deshmukh Krishi Sanjivani Prakalp).
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
+
+export default AlertsRecommendations;
