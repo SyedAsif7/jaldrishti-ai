@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://jaldrishti-backend.onrender.com/api/:path*"
+      "destination": "https://jaldrishti-ai-fzxa.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",

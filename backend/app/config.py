@@ -19,6 +19,7 @@ class Settings(BaseModel):
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
         "https://jaldrishti.vercel.app",
+        "https://jaldrishti-ai-three.vercel.app",
         "https://jaldrishti-frontend.onrender.com",
         "*"
     ]
