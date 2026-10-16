@@ -29,21 +29,21 @@ interface DroughtRiskMapProps {
 }
 
 type MapMode = 'composite' | 'rainfall' | 'groundwater' | 'reservoir';
-type BasemapType = 'osm' | 'carto-light' | 'esri-topo';
+type BasemapType = 'esri-canvas' | 'osm' | 'esri-topo';
 
 const basemapConfigs: Record<BasemapType, { name: string; url: string; attribution: string }> = {
+  'esri-canvas': {
+    name: 'Clean Canvas',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+  },
   'osm': {
     name: 'OpenStreetMap',
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   },
-  'carto-light': {
-    name: 'Terrain Light',
-    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; CARTO &copy; OpenStreetMap'
-  },
   'esri-topo': {
-    name: 'Esri Topographic',
+    name: 'Topographic',
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
     attribution: 'Tiles &copy; Esri &mdash; USGS, NOAA'
   }
@@ -76,7 +76,7 @@ export const DroughtRiskMap: React.FC<DroughtRiskMapProps> = ({
   const t = useTranslation(language);
   const [hoveredDistrict, setHoveredDistrict] = useState<District | null>(null);
   const [mapMode, setMapMode] = useState<MapMode>('composite');
-  const [basemap, setBasemap] = useState<BasemapType>('carto-light');
+  const [basemap, setBasemap] = useState<BasemapType>('esri-canvas');
   const [showLabels, setShowLabels] = useState<boolean>(true);
 
   // Marathwada geographic centroid coordinates
@@ -250,7 +250,7 @@ export const DroughtRiskMap: React.FC<DroughtRiskMapProps> = ({
           {/* Basemap Switcher */}
           <div className="flex items-center gap-1 bg-[#FFFEFA] border border-[#D1C9BA] p-1 rounded-xl text-xs font-semibold shadow-xs">
             <MapIcon className="w-3.5 h-3.5 text-[#68736E] ml-2" />
-            {(['carto-light', 'osm', 'esri-topo'] as BasemapType[]).map((bm) => (
+            {(['esri-canvas', 'osm', 'esri-topo'] as BasemapType[]).map((bm) => (
               <button
                 key={bm}
                 onClick={() => setBasemap(bm)}
