@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JalDrishti AI – 6-Slide Pitch Deck | Seva First Innovation Challenge 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              sand: '#F5F2E9',
+              sandLight: '#FFFEFA',
+              darkGreen: '#234F46',
+              riverBlue: '#267D9D',
+              rust: '#C25E3E',
+              amber: '#D97706',
+              charcoal: '#25332F',
+              muted: '#68736E',
+              border: '#E3DCce'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #1a2421;
+      color: #25332F;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide-canvas {
+      aspect-ratio: 16 / 9;
+      max-height: 88vh;
+      width: 100%;
+      max-width: 1400px;
+    }
+    @media print {
+      body {
+        background: #fff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .slide-container {
+        display: block !important;
+      }
+      .slide {
+        display: flex !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 2.5rem !important;
+      }
+      .notes-panel {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 md:p-6 select-none">
+
+  <!-- Top Floating Controls Header -->
+  <header class="no-print max-w-7xl mx-auto w-full flex items-center justify-between pb-3 text-white/90">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center font-bold text-white shadow">JD</div>
+      <div>
+        <h1 class="font-bold text-sm md:text-base leading-tight tracking-wide">JalDrishti AI &bull; Competition Pitch Deck</h1>
+        <p class="text-xs text-white/60">Seva First Innovation Challenge 2026 &bull; Maharashtra Zone &bull; Sustainability Track</p>
+      </div>
+    </div>
+
+    <!-- Navigation & Quick Actions -->
+    <div class="flex items-center gap-2">
+      <button id="toggleNotesBtn" onclick="toggleNotes()" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold backdrop-blur transition flex items-center gap-1.5 border border-white/10">
+        <span>🎙️</span> <span id="notesBtnText">Show Presenter Notes (N)</span>
+      </button>
+      <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-xs font-semibold shadow transition flex items-center gap-1.5">
+        <span>📄</span> <span>Print / Save as PDF</span>
+      </button>
+      <a href="https://jaldrishti-ai-three.vercel.app" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-xs font-semibold shadow transition flex items-center gap-1.5">
+        <span>🌐</span> <span>Live App</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Slide Display Container -->
+  <main class="flex-1 flex flex-col items-center justify-center relative w-full my-auto">
+    <div class="slide-canvas slide-container bg-[#F5F2E9] rounded-2xl shadow-2xl border border-[#D1C9BA] overflow-hidden flex flex-col justify-between relative transition-all">
+
+      <!-- SLIDE 1 -->
+      <section id="slide-1" class="slide h-full flex flex-col justify-between p-8 md:p-12">
+        <!-- Header -->
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 01 &bull; Problem Statement & Need
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              The Silent Crisis: Fragmented Water Information in Marathwada
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              Recurring structural drought meets administrative data silos, turning predictable water stress into costly emergency relief.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-[#68736E]">
+            <span class="font-bold text-[#C25E3E]">18.7M Citizens</span><br/>8 Districts &bull; 76 Talukas
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto py-4">
+          <!-- Left: Physical Reality -->
+          <div class="bg-white/70 p-6 rounded-xl border border-[#E3DCce] shadow-sm">
+            <h3 class="font-bold text-base text-[#234F46] flex items-center gap-2 mb-3">
+              <span class="w-6 h-6 rounded-full bg-[#C25E3E]/15 text-[#C25E3E] flex items-center justify-center text-xs">⚠️</span>
+              Chronic Regional Vulnerability
+            </h3>
+            <ul class="space-y-2.5 text-xs md:text-sm text-[#25332F] leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-[#C25E3E] font-bold">&bull;</span>
+                <span><strong>Rain-Shadow Hard Rock:</strong> Western Ghats rain shadow with only 650–880 mm erratic monsoon rainfall; Deccan basalt aquifers lack storage depth.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#C25E3E] font-bold">&bull;</span>
+                <span><strong>Rapid Well Depletion:</strong> >70% of GSDA monitoring wells register >2m seasonal water table drops below decadal averages.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#C25E3E] font-bold">&bull;</span>
+                <span><strong>Surface Water Exhaustion:</strong> Division reservoirs (Jayakwadi, Yeldari) regularly hit dead-storage levels by April.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Administrative Silos -->
+          <div class="bg-white/70 p-6 rounded-xl border border-[#E3DCce] shadow-sm">
+            <h3 class="font-bold text-base text-[#234F46] flex items-center gap-2 mb-3">
+              <span class="w-6 h-6 rounded-full bg-[#267D9D]/15 text-[#267D9D] flex items-center justify-center text-xs">🏛️</span>
+              The Departmental Data Silo Bottleneck
+            </h3>
+            <div class="space-y-2 text-xs md:text-sm">
+              <div class="p-2.5 bg-[#F5F2E9] rounded-lg border border-[#E3DCce] flex items-center justify-between">
+                <span><strong>IMD / Mahavedh</strong> &rarr; Rainfall Deficits</span>
+                <span class="text-xs font-mono text-red-600 bg-red-100 px-2 py-0.5 rounded">Isolated</span>
+              </div>
+              <div class="p-2.5 bg-[#F5F2E9] rounded-lg border border-[#E3DCce] flex items-center justify-between">
+                <span><strong>GSDA</strong> &rarr; Observation Wells (m bgl)</span>
+                <span class="text-xs font-mono text-red-600 bg-red-100 px-2 py-0.5 rounded">Quarterly Silo</span>
+              </div>
+              <div class="p-2.5 bg-[#F5F2E9] rounded-lg border border-[#E3DCce] flex items-center justify-between">
+                <span><strong>Irrigation (WRD)</strong> &rarr; Dam Live Storage %</span>
+                <span class="text-xs font-mono text-red-600 bg-red-100 px-2 py-0.5 rounded">Separate Portal</span>
+              </div>
+            </div>
+            <p class="text-xs text-[#C25E3E] font-semibold mt-3 italic">
+              Result: District Collectors only act in late autumn—after Kharif crops wilt and emergency tankers cost hundreds of crores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Baseline Sources: CGWB Year Book &bull; Maharashtra Water Resources Dept &bull; IMD Pune</div>
+          <div class="font-bold font-mono">01 / 06</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2 -->
+      <section id="slide-2" class="slide hidden h-full flex flex-col justify-between p-8 md:p-12">
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 02 &bull; The Solution
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              JalDrishti AI: Unified, Explainable Water Intelligence
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              Consolidating meteorology, hydrogeology, and surface storage into proactive district decision support 30–45 days earlier.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-[#267D9D]">
+            <span class="font-bold text-[#234F46]">Proactive Governance</span><br/>30–45 Day Lead Time
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-auto py-4">
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#267D9D]/15 text-[#267D9D] flex items-center justify-center font-bold text-lg mb-3">1</div>
+              <h3 class="font-bold text-base text-[#234F46] mb-2">Ingest & Unify</h3>
+              <p class="text-xs text-[#68736E] leading-relaxed">
+                Connects 3 isolated government feeds into a standardized data pipeline: IMD monsoon departures, GSDA observation well piezometers, and WRD reservoir gauges across all 8 districts.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E3DCce] text-[11px] font-mono text-[#267D9D]">
+              Normalized Census LGD Codes
+            </div>
+          </div>
+
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#234F46]/15 text-[#234F46] flex items-center justify-center font-bold text-lg mb-3">2</div>
+              <h3 class="font-bold text-base text-[#234F46] mb-2">Explainable AI & MCDA</h3>
+              <p class="text-xs text-[#68736E] leading-relaxed">
+                Calculates WMO-standardized SPI indices and transparent Multi-Criteria Decision Analysis scores (0–100). No black-box AI; every variable is weighted and traceable for audit.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E3DCce] text-[11px] font-mono text-[#234F46]">
+              WMO-No. 1090 &bull; Ridge/GBM
+            </div>
+          </div>
+
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#D97706]/15 text-[#D97706] flex items-center justify-center font-bold text-lg mb-3">3</div>
+              <h3 class="font-bold text-base text-[#234F46] mb-2">Actionable Briefings</h3>
+              <p class="text-xs text-[#68736E] leading-relaxed">
+                Generates instant departmental advisories for District Collectors, Tahsildars, and Agriculture Officers with one-click bilingual PDF/CSV dossiers for DDMA meetings.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E3DCce] text-[11px] font-mono text-[#D97706]">
+              English & Marathi Support
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Live Prototype Coverage: Chhatrapati Sambhajinagar, Jalna, Beed, Dharashiv, Latur, Parbhani, Nanded, Hingoli</div>
+          <div class="font-bold font-mono">02 / 06</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3 -->
+      <section id="slide-3" class="slide hidden h-full flex flex-col justify-between p-8 md:p-12">
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 03 &bull; Technical Architecture
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              Explainable Science, Zero Black-Box Opacity
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              Built on international meteorological standards, deterministic decision analysis, and chronologically validated machine learning.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-[#234F46]">
+            <span class="font-bold text-emerald-700">41/41 Tests Passing</span><br/>Zero Data Leakage
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto py-3">
+          <!-- Mathematical Formula -->
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <h3 class="font-bold text-sm text-[#234F46] mb-2 uppercase tracking-wider font-mono">1. Audited Multi-Criteria Decision Analysis</h3>
+            <div class="bg-[#234F46] text-[#FFFEFA] p-4 rounded-lg font-mono text-xs leading-relaxed my-2 shadow-inner">
+              Score = (0.35 &times; RainDeficit) + (0.30 &times; GW_Stress) +<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0.25 &times; ReservoirDepletion) + (0.10 &times; SoilMoisture)
+            </div>
+            <ul class="text-xs text-[#25332F] space-y-1.5 mt-3">
+              <li>&bull; <strong>Fully Auditable:</strong> District Collectors can inspect exact weights and variable contributions.</li>
+              <li>&bull; <strong>WMO-No. 1090 SPI Engine:</strong> Fits 2-parameter Gamma distribution MLE with zero-rain adjustments.</li>
+            </ul>
+          </div>
+
+          <!-- ML Validation -->
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <h3 class="font-bold text-sm text-[#234F46] mb-2 uppercase tracking-wider font-mono">2. Chronological ML Out-of-Sample Benchmark</h3>
+            <div class="grid grid-cols-2 gap-3 my-2 text-center font-mono text-xs">
+              <div class="p-3 bg-red-50 rounded border border-red-200">
+                <div class="text-gray-500 text-[10px]">NAIVE PERSISTENCE</div>
+                <div class="text-base font-bold text-red-700">MAE: 28.6 mm</div>
+                <div class="text-[10px] text-gray-500">Baseline (X<sub>t</sub> = X<sub>t-1</sub>)</div>
+              </div>
+              <div class="p-3 bg-emerald-50 rounded border border-emerald-200">
+                <div class="text-gray-500 text-[10px]">JALDRISHTI ML (RIDGE+GBM)</div>
+                <div class="text-base font-bold text-emerald-700">MAE: 18.4 mm</div>
+                <div class="text-[10px] text-emerald-600 font-semibold">+35.7% Accuracy Gain</div>
+              </div>
+            </div>
+            <p class="text-xs text-[#68736E] mt-2 leading-relaxed">
+              Strict 2000–2018 train / 2019–2024 test split guarantees zero lookahead leakage. Fully open source with no commercial API fees.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Tech Stack: FastAPI &bull; Scikit-Learn &bull; React 18 &bull; Tailwind CSS &bull; Leaflet GIS &bull; Cloud Native</div>
+          <div class="font-bold font-mono">03 / 06</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4 -->
+      <section id="slide-4" class="slide hidden h-full flex flex-col justify-between p-8 md:p-12">
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 04 &bull; Working Prototype & Pilot
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              Validated Technology Ready for Parbhani Pilot
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              A proven prototype deployed on public cloud, evaluated across all 8 districts, proposed for a 90-day pilot.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-[#C25E3E]">
+            <span class="font-bold text-[#C25E3E]">TRL-6 Readiness</span><br/>Public Cloud Deployed
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto py-3">
+          <!-- Parbhani Metrics -->
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-sm text-[#234F46] uppercase font-mono">Pilot Focus: Parbhani District</h3>
+              <span class="px-2 py-0.5 bg-amber-100 text-amber-800 font-bold text-xs rounded font-mono">HIGH RISK (59.9)</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between py-1 border-b border-[#E3DCce]">
+                <span class="text-[#68736E]">Monsoon Rainfall Deficit:</span>
+                <span class="font-bold text-red-600 font-mono">-33.0% (436.8 mm vs 652 mm)</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-[#E3DCce]">
+                <span class="text-[#68736E]">Groundwater Depleted Wells:</span>
+                <span class="font-bold text-[#C25E3E] font-mono">68.0% (Stress Index: 72.0)</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-[#E3DCce]">
+                <span class="text-[#68736E]">Lower Dudhana Live Storage:</span>
+                <span class="font-bold text-amber-700 font-mono">36.8% (145 Drinking Days Left)</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span class="text-[#68736E]">Critical Talukas:</span>
+                <span class="font-bold text-[#234F46]">Pathri, Gangakhed, Selu</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 90-day Roadmap -->
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <h3 class="font-bold text-sm text-[#234F46] mb-3 uppercase font-mono">90-Day Implementation Horizons</h3>
+            <div class="space-y-2.5 text-xs">
+              <div class="p-2 bg-emerald-50 rounded border-l-4 border-emerald-600">
+                <div class="font-bold text-emerald-800">Days 1–30: Ingestion & Calibration</div>
+                <div class="text-gray-600 text-[11px]">Secure DDMA sanction; connect Mahavedh AWS & GSDA API feeds; calibrate 9 talukas.</div>
+              </div>
+              <div class="p-2 bg-blue-50 rounded border-l-4 border-blue-600">
+                <div class="font-bold text-blue-800">Days 31–60: Collectorate Shadow Run</div>
+                <div class="text-gray-600 text-[11px]">Parallel run with manual drought assessments; Tahsildar training workshops.</div>
+              </div>
+              <div class="p-2 bg-purple-50 rounded border-l-4 border-purple-600">
+                <div class="font-bold text-purple-800">Days 61–90: Impact Audit & State Handover</div>
+                <div class="text-gray-600 text-[11px]">Audit 30-day early lead time; submit Pilot Verification Dossier to SDMA.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Live URLs: jaldrishti-ai-three.vercel.app &bull; jaldrishti-ai-fzxa.onrender.com</div>
+          <div class="font-bold font-mono">04 / 06</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5 -->
+      <section id="slide-5" class="slide hidden h-full flex flex-col justify-between p-8 md:p-12">
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 05 &bull; Impact & Scalability
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              Measurable Public Savings & Statewide Scale
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              From reactive emergency relief to proactive resource governance across 36 districts of Maharashtra.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-emerald-700">
+            <span class="font-bold text-emerald-800">15–25% Savings</span><br/>Emergency Relief Budget
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-auto py-3">
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm mb-3">₹</div>
+            <h3 class="font-bold text-sm text-[#234F46] mb-1">Exchequer Protection</h3>
+            <p class="text-xs text-[#68736E] leading-relaxed">
+              30-day advance notice enables early bulk water requisition at planned rates rather than emergency surge tanker billing, targeting 15–25% taxpayer savings.
+            </p>
+          </div>
+
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-sm mb-3">🌾</div>
+            <h3 class="font-bold text-sm text-[#234F46] mb-1">Agronomic Resilience</h3>
+            <p class="text-xs text-[#68736E] leading-relaxed">
+              Allows Agriculture Department to guide farmers toward protective micro-irrigation, mulching, or short-duration drought crops before permanent wilting occurs.
+            </p>
+          </div>
+
+          <div class="bg-white/80 p-5 rounded-xl border border-[#E3DCce] shadow-sm">
+            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm mb-3">🗺️</div>
+            <h3 class="font-bold text-sm text-[#234F46] mb-1">Statewide Scalability</h3>
+            <p class="text-xs text-[#68736E] leading-relaxed">
+              Standard Census LGD codes allow plug-and-play expansion to Solapur, Ahmednagar, and Vidarbha. Core algorithms comply with the National Drought Manual.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-3 bg-white/60 rounded-xl border border-[#E3DCce] flex items-center justify-between text-xs">
+          <span><strong>Expansion Pathway:</strong> Parbhani Pilot (90 Days) &rarr; 8 Marathwada Districts (Year 1) &rarr; All 36 Maharashtra Districts (Year 2)</span>
+          <span class="font-mono text-emerald-700 font-bold">Zero Re-Architecture</span>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Target Beneficiaries: 1.83M Parbhani Citizens &bull; 18.7M Marathwada &bull; 125M Maharashtra</div>
+          <div class="font-bold font-mono">05 / 06</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6 -->
+      <section id="slide-6" class="slide hidden h-full flex flex-col justify-between p-8 md:p-12">
+        <div class="flex items-start justify-between border-b border-[#234F46]/15 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#234F46]/10 text-[#234F46] font-mono text-xs font-bold rounded-full mb-2 uppercase tracking-wider">
+              Slide 06 &bull; Budget & Roadmap
+            </span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#234F46] tracking-tight">
+              Lean Investment, High Public Return
+            </h2>
+            <p class="text-sm md:text-base text-[#68736E] font-medium mt-1">
+              A 90-day pilot funded at ₹14.5 Lakhs delivering an institutional water intelligence asset for the Government of Maharashtra.
+            </p>
+          </div>
+          <div class="text-right font-mono text-xs text-[#234F46]">
+            <span class="font-bold text-emerald-700 text-sm">₹14.50 Lakhs</span><br/>90-Day Complete Pilot
+          </div>
+        </div>
+
+        <!-- Budget Table -->
+        <div class="bg-white/80 rounded-xl border border-[#E3DCce] overflow-hidden my-auto shadow-sm">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-[#234F46] text-[#FFFEFA] font-mono">
+              <tr>
+                <th class="p-2.5">Category</th>
+                <th class="p-2.5">Scope & Deliverables</th>
+                <th class="p-2.5 text-right">Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#E3DCce]">
+              <tr>
+                <td class="p-2.5 font-bold">Data Connectors</td>
+                <td class="p-2.5 text-[#68736E]">Mahavedh AWS, GSDA, & WRD live ingestion pipelines</td>
+                <td class="p-2.5 text-right font-mono font-semibold">₹3,50,000</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">System Hardening</td>
+                <td class="p-2.5 text-[#68736E]">Micro-watershed GIS layers, role-based access, TLS 1.3 security</td>
+                <td class="p-2.5 text-right font-mono font-semibold">₹3,80,000</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Field Calibration</td>
+                <td class="p-2.5 text-[#68736E]">On-ground telemetry verification across 9 Parbhani talukas</td>
+                <td class="p-2.5 text-right font-mono font-semibold">₹2,70,000</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Capacity Building</td>
+                <td class="p-2.5 text-[#68736E]">Training sessions for DDMA, Tahsildars, & Agriculture Officers</td>
+                <td class="p-2.5 text-right font-mono font-semibold">₹2,00,000</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-bold">Cloud & Audit Buffer</td>
+                <td class="p-2.5 text-[#68736E]">MeitY-compliant staging cloud infrastructure & pilot contingency</td>
+                <td class="p-2.5 text-right font-mono font-semibold">₹2,50,000</td>
+              </tr>
+              <tr class="bg-emerald-50/70 font-bold text-[#234F46]">
+                <td class="p-2.5">Total Pilot Investment</td>
+                <td class="p-2.5">Complete 90-day Parbhani proof-of-concept</td>
+                <td class="p-2.5 text-right font-mono text-sm text-emerald-800">₹14,50,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-[#234F46]/10 text-xs text-[#68736E]">
+          <div>Post-Pilot: 100% Open-Source Handover to MahaGov Cloud with Zero Vendor Lock-In</div>
+          <div class="font-bold font-mono">06 / 06</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Navigation Bar & Slide Switcher -->
+    <div class="no-print flex items-center justify-center gap-4 mt-4 w-full max-w-xl mx-auto">
+      <button onclick="prevSlide()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs backdrop-blur transition border border-white/10 flex items-center gap-1">
+        <span>&larr;</span> Previous
+      </button>
+
+      <div class="flex items-center gap-2">
+        <button onclick="goToSlide(1)" id="dot-1" class="w-8 h-2 rounded-full bg-emerald-500 transition-all"></button>
+        <button onclick="goToSlide(2)" id="dot-2" class="w-2.5 h-2 rounded-full bg-white/30 transition-all"></button>
+        <button onclick="goToSlide(3)" id="dot-3" class="w-2.5 h-2 rounded-full bg-white/30 transition-all"></button>
+        <button onclick="goToSlide(4)" id="dot-4" class="w-2.5 h-2 rounded-full bg-white/30 transition-all"></button>
+        <button onclick="goToSlide(5)" id="dot-5" class="w-2.5 h-2 rounded-full bg-white/30 transition-all"></button>
+        <button onclick="goToSlide(6)" id="dot-6" class="w-2.5 h-2 rounded-full bg-white/30 transition-all"></button>
+      </div>
+
+      <button onclick="nextSlide()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs backdrop-blur transition border border-white/10 flex items-center gap-1">
+        Next <span>&rarr;</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Floating Presenter Notes Panel -->
+  <aside id="notesPanel" class="no-print hidden fixed bottom-4 right-4 max-w-md w-full bg-[#111827] text-white p-5 rounded-2xl shadow-2xl border border-white/20 z-50 text-xs transition-all">
+    <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/15">
+      <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+        <span>🎙️</span> <span id="notesTitle">Slide 1 Presenter Script (45s)</span>
+      </div>
+      <button onclick="toggleNotes()" class="text-white/60 hover:text-white font-bold">&times;</button>
+    </div>
+    <p id="notesContent" class="text-gray-300 leading-relaxed italic">
+      "Judges, Marathwada’s drought crisis is not just a lack of rain; it is a crisis of fragmented information. Right now, rainfall data sits with IMD, groundwater tables sit with GSDA, and reservoir levels sit with Irrigation. Because these departments don't have a single operational picture, district administrations act only after crops have failed and taps run dry. JalDrishti AI bridges these silos."
+    </p>
+  </aside>
+
+  <!-- Script for Navigation & Presenter Mode -->
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+
+    const presenterNotes = {
+      1: "Judges, Marathwada’s drought crisis is not just a lack of rain; it is a crisis of fragmented information. Right now, rainfall data sits with IMD, groundwater tables sit with GSDA, and reservoir levels sit with Irrigation. Because these departments don't have a single operational picture, district administrations act only after crops have failed and taps run dry. JalDrishti AI bridges these silos.",
+      2: "JalDrishti AI is not another generic dashboard. It brings together rainfall departures, groundwater tables, and dam levels into an objective composite risk index. It gives District Collectors and Agriculture Officers actionable alerts 30 to 45 days before crisis thresholds are breached—allowing preventive water rationing instead of emergency panic.",
+      3: "In government technology, trust is everything. Black-box AI that cannot explain its predictions will never be adopted by District Collectors who must justify disaster expenditure. JalDrishti AI uses transparent WMO meteorological formulas, deterministic multi-criteria weights, and machine learning models evaluated strictly on historical out-of-sample data. Every number on screen can be traced and audited.",
+      4: "We are not presenting a concept; we are presenting a fully functional prototype. All 41 backend tests pass, the frontend is built, and all eight districts are live. We propose a 90-day pilot in Parbhani district across its 9 talukas to integrate live Mahavedh and GSDA feeds, running in parallel with the Collectorate’s drought cell to prove 30-day early warning in the field.",
+      5: "The impact is clear and measurable. A 30-day lead time allows district collectors to plan tanker water supply rather than pay emergency surge rates—saving millions for the state exchequer. More importantly, it directs Jalyukt Shivar recharge funds to the exact aquifers that need it most. And because our system is built on standardized state administrative codes, scaling from Parbhani to all 36 districts of Maharashtra is seamless.",
+      6: "For a modest pilot investment of ₹14.5 Lakhs—less than the cost of running emergency water tankers in a single taluka for two weeks—the Government of Maharashtra gains an explainable, open-source water intelligence system. We deliver a complete handover to the state with zero vendor lock-in. We invite the Seva First Innovation Challenge jury to support this vital step toward drought resilience in Marathwada. Thank you."
+    };
+
+    function updateSlide() {
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        if (i === currentSlide) {
+          slide.classList.remove('hidden');
+          dot.classList.remove('w-2.5', 'bg-white/30');
+          dot.classList.add('w-8', 'bg-emerald-500');
+        } else {
+          slide.classList.add('hidden');
+          dot.classList.remove('w-8', 'bg-emerald-500');
+          dot.classList.add('w-2.5', 'bg-white/30');
+        }
+      }
+      document.getElementById('notesTitle').innerText = `Slide ${currentSlide} Presenter Script (45s)`;
+      document.getElementById('notesContent').innerText = `"${presenterNotes[currentSlide]}"`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      updateSlide();
+    }
+
+    function toggleNotes() {
+      const panel = document.getElementById('notesPanel');
+      const text = document.getElementById('notesBtnText');
+      if (panel.classList.contains('hidden')) {
+        panel.classList.remove('hidden');
+        text.innerText = 'Hide Notes (N)';
+      } else {
+        panel.classList.add('hidden');
+        text.innerText = 'Show Presenter Notes (N)';
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'n' || e.key === 'N') {
+        toggleNotes();
+      } else if (e.key === 'p' || e.key === 'P') {
+        window.print();
+      }
+    });
+
+    updateSlide();
+  </script>
+</body>
+</html>
